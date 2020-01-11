@@ -200,13 +200,13 @@ function parallax(event) {
   $('.main__img').each(function(i) {
     var $this = $(this);
 
-    $this.css('transform', 'translate3d(' + (mouseX * 0.008 * (i + 1)).toFixed(1) + 'px, ' + (mouseY * 0.008 * (i + 1)).toFixed(1) + 'px, 0)')
+    $this.css('transform', 'translate3d(' + (mouseX * 0.008 * (i + 1)).toFixed(0) + 'px, ' + (mouseY * 0.008 * (i + 1)).toFixed(0) + 'px, 0)')
   });
 
   $('.main__subblock').each(function(i) {
     var $this = $(this);
 
-    $this.css('transform', 'translate3d(' + (mouseX * 0.008 * (i + 1)).toFixed(1) + 'px, ' + (mouseY * 0.008 * (i + 1)).toFixed(1) + 'px, 0)')
+    $this.css('transform', 'translate3d(' + (mouseX * 0.008 * (i + 1)).toFixed(0) + 'px, ' + (mouseY * 0.008 * (i + 1)).toFixed(0) + 'px, 0)')
   });
 }
 
