@@ -1596,7 +1596,6 @@ input {
         font-weight: 500; }
       .knows__item:hover .knows__tooltip {
         opacity: 1;
-        pointer-events: auto;
         margin: 0;
         z-index: 100; }
   .knows__icon {
@@ -2741,7 +2740,7 @@ input {
         background-color: #fff;
         -webkit-box-shadow: 0px 15px 28.5px 1.5px rgba(0, 0, 0, 0.34);
                 box-shadow: 0px 15px 28.5px 1.5px rgba(0, 0, 0, 0.34);
-        border: 1px solid #fff; }
+        border-color: #fff; }
   .about__images {
     position: absolute;
     width: 100%;
@@ -3154,9 +3153,9 @@ input {
         max-width: 400px;
         margin: 45px auto 0; } }
     .packets__form form {
-      /* -webkit-flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap;
           -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap; */
+              flex-wrap: nowrap;
       position: relative; }
       @media only screen and (max-width: 1200px) {
         .packets__form form {

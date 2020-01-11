@@ -124,6 +124,7 @@ $(document).ready(function() {
 			scrollTop: $(link).offset().top - 50
 		}, 1000);
   });
+
   anim();
   var like = false;
 
@@ -151,10 +152,6 @@ $(document).ready(function() {
   });
 });
 
-$(window).on('load', function() {
-	
-});
-
 $(window).on('scroll', function() {
 	if ($(window).width() >= 1001) {
 		fixed();
@@ -180,9 +177,8 @@ function anim() {
 			}
 		});
 	}
-
-
 }
+
 
 $(document).on('mousemove', function() {
 	if ($(window).width() >= 1201) {
@@ -204,13 +200,13 @@ function parallax(event) {
   $('.main__img').each(function(i) {
     var $this = $(this);
 
-    $this.css('transform', 'translate(' + (mouseX * 0.008 * (i + 1)).toFixed(1) + 'px, ' + (mouseY * 0.008 * (i + 1)).toFixed(1) + 'px)')
+    $this.css('transform', 'translate3d(' + (mouseX * 0.008 * (i + 1)).toFixed(1) + 'px, ' + (mouseY * 0.008 * (i + 1)).toFixed(1) + 'px, 0)')
   });
 
   $('.main__subblock').each(function(i) {
     var $this = $(this);
 
-    $this.css('transform', 'translate(' + (mouseX * 0.008 * (i + 1)).toFixed(1) + 'px, ' + (mouseY * 0.008 * (i + 1)).toFixed(1) + 'px)')
+    $this.css('transform', 'translate3d(' + (mouseX * 0.008 * (i + 1)).toFixed(1) + 'px, ' + (mouseY * 0.008 * (i + 1)).toFixed(1) + 'px, 0)')
   });
 }
 
