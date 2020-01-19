@@ -1,44 +1,5 @@
 $(document).ready(function() {
 
-  // Модальные окна
-
-		// Открываем модальное окно
-
-    var modal = $('.modal'),
-        container = $('.modal__container');
-        
-    function modalOpen() {
-      $('body').css('overflow', 'hidden');
-      modal.fadeIn(300);
-      container.addClass('active');
-    }
-
-    function modalClose() {
-      container.removeClass('active');
-      modal.fadeOut(300);
-      $('body').css('overflow', 'auto');
-    }
-
-  // setTimeout(function() {
-  //   modalOpen()
-  // }, 300);
-
-  // Закрываем модальное окно при клике вне контейнера
-
-    modal.on('click',function(e) {
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        modalClose();
-      }
-    });
-
-  // ... и по крестику
-
-    $('.modal__close').on('click', function() {
-      modalClose();
-    });
-
-
-
 	sliders();
 
 	var endTimer = $(".eTimer-packets").attr('data-end-timer');

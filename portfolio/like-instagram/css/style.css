@@ -1048,7 +1048,12 @@ input {
   .main__img {
     -webkit-transition: .1s;
     -o-transition: .1s;
-    transition: .1s; }
+    transition: .1s;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-perspective: 1000;
+            perspective: 1000;
+    will-change: transform; }
     .main__img-block {
       position: absolute; }
       @media only screen and (max-width: 1000px) {
@@ -1209,6 +1214,10 @@ input {
     -webkit-transition: .1s;
     -o-transition: .1s;
     transition: .1s;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-perspective: 1000;
+            perspective: 1000;
     will-change: transform; }
   .main__subtitle {
     margin-bottom: 10px; }
@@ -2756,9 +2765,10 @@ input {
   .about__img {
     position: absolute;
     z-index: 10;
-    -webkit-transition: .1s;
-    -o-transition: .1s;
-    transition: .1s;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-perspective: 1000;
+            perspective: 1000;
     will-change: transform; }
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       .about__img {
