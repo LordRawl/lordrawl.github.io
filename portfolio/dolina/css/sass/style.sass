@@ -1,0 +1,1643 @@
+@import "_fonts", "_normalize", "components/_mixins"
+
+@import "components/_vars"
+
+html 
+	box-sizing: border-box
+	@extend %text1
+
+@function rem($px)
+	@return $px/16px + (0rem)
+
+
+
+body
+	line-height: 1.4
+	font-family: $muller
+	color: $main-dark-color
+
+*, *:before, *:after 
+	box-sizing: border-box
+	outline: none
+	margin: 0
+	padding: 0
+
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+
+button	
+	cursor: pointer
+	font-family: $muller
+
+input
+	font-family: $muller
+
+.container
+	width: 1170px
+	padding: 0 15px
+	margin: 0 auto
+	position: relative
+	@include media(1200px)
+		width: 990px
+	@include media(992px)
+		width: 760px
+	@include media(768px)
+		width: 100%
+
+.wrapper
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	overflow: hidden
+	background-color: #fff
+
+.page
+	flex: 1 1 auto
+
+.browserupgrade
+	margin: 0.2em 0
+	background: #ccc
+	color: #000
+	padding: 0.2em 0
+
+@import "components/_slick"
+
+@import "components/_header", "components/_loader"
+
+.svg
+	display: none
+
+.btn
+	border-radius: 3px
+	background-color: $main-color
+	color: #fff
+	border: 1px solid $main-color
+	font-size: 19px
+	text-transform: uppercase
+	padding: 21px 18px 17px
+	line-height: 0.8
+	@include tr(.3s)
+	&:hover
+		background-color: $main-dark-color
+		color: #fff
+		border-color: $main-dark-color
+	&:active
+		background-color: #fff
+		color: $main-color
+		border-color: $main-color
+
+section
+	padding: 100px 0
+	@include media(1200px)
+		padding: 80px 0
+	@include media(768px)
+		padding: 60px 0
+	@include media(480px)
+		padding: 50px 0
+
+.title
+	@extend %title2
+
+.main
+	padding: 100px 0
+	z-index: 1
+	position: relative
+	@include media(1200px)
+		padding-bottom: 80px
+	@include media(992px)
+		padding-bottom: 110px
+	@include media(768px)
+		padding-bottom: 200px
+	@include media(480px)
+		padding-top: 80px
+	&-s
+		overflow: hidden
+		position: relative
+		padding: 0
+	&__title
+		margin: 90px 0
+		@include media(1200px)
+			margin: 70px 0 50px
+		@include media(768px)
+			margin: 50px 0
+		@include media(480px)
+			margin: 25px 0
+		&-svg
+			@include size(480px,110px)
+			@include media(768px)
+				@include size(400px,90px)
+			@include media(480px)
+				@include size(290px,70px)
+	&__svg
+		&-1
+			fill: #e53045
+			opacity: 0
+		&-2
+			fill: #e53045
+			opacity: 0
+		&-3
+			fill: #a3a3a3
+		&-4
+			fill: #7f7f7f
+		&-5
+			fill: #545454
+		&-6
+			fill: #ddd
+		&-7
+			font-size: 81px
+			fill: #1e1e1e
+			font-family: $muller
+			font-weight: 800
+			letter-spacing: 0.15em
+	&__descr
+		@extend %title4
+		max-width: 440px
+	&__list
+		margin-top: 55px
+		display: flex
+		@include media(768px)
+			max-width: 300px
+			margin-top: 40px
+	&__item
+		max-width: 250px
+		@include media(768px)
+			max-width: 100%
+		&:not(:last-child)
+			margin-right: 80px
+			@include media(1200px)
+				margin-right: 30px
+			@include media(768px)
+				margin-right: 0
+	&__subtitle
+		@extend %title5
+	&__text
+		@include media(1200px)
+			max-width: 200px
+	&__btn
+		margin-top: 105px
+		@include media(1200px)
+			margin-top: 65px
+		@include media(768px)
+			margin-top: 40px
+	&__picture
+		position: absolute
+		right: -200px
+		bottom: 0
+		line-height: 0
+		z-index: -1
+		@include media(992px)
+			transform: scale(.8)
+		@include media(768px)
+			transform: scale(.6)
+			right: -130px
+	&__slide
+		position: absolute
+		&_1
+			bottom: 355px
+			right: 300px
+			@include media(480px)
+				bottom: 305px
+		&_2
+			bottom: 285px
+			right: 270px
+			@include media(480px)
+				bottom: 235px
+		&_3
+			bottom: 255px
+			right: 90px
+			@include media(480px)
+				bottom: 205px
+		&_4
+			bottom: -2px
+			right: 0
+	&__img
+		
+.suit
+	position: relative
+	z-index: 1
+	padding-bottom: 100px
+	@include media(1200px)
+		padding-bottom: 80px
+	@include media(768px)
+		padding-bottom: 130px
+	@include media(480px)
+		padding-bottom: 50px
+	&-s
+		background-color: $second-light-color
+		padding-bottom: 0
+		overflow: hidden
+	&__title
+	&__list
+		margin-top: 90px
+		width: 640px
+		max-width: 100%
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		@include media(1200px)
+		@include media(992px)
+			width: 480px
+			margin-top: 70px
+		@include media(768px)
+			margin-top: 40px
+			width: 100%
+	&__subblock
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__item
+		display: flex
+		flex-direction: column
+		@include media(768px)
+			flex-direction: row
+			align-items: center
+		&:not(:first-child)
+			margin-top: 40px
+		@include media(480px)
+			align-items: flex-start
+	&__icon
+		@include size(60px)
+		fill-rule: evenodd
+		flex: 0 0 auto
+		margin-bottom: 20px
+		@include media(768px)
+			margin-bottom: 0
+			margin-right: 20px
+		@include media(480px)
+			@include size(50px)
+	&__svg
+	&__text
+		@extend %text1
+		max-width: 270px
+		@include media(992px)
+			max-width: 220px
+		@include media(768px, 481px)
+			max-width: 100%
+		&-descr
+			font-weight: normal
+	&-mountain
+		position: absolute
+		bottom: 0
+		isolation: isolate
+		right: -170px
+		z-index: -1
+		@include size(714px, 631px)
+		@include media(1200px)
+			@include size(510px, 450px)
+		@include media(768px)
+			@include size(240px, 210px)
+			right: auto
+			@include cx
+			bottom: 0px
+		@include media(480px)
+			@include size(170px, 150px)
+			transform: none
+			left: 0
+		&-2
+			fill: #ddd
+		&-3
+			fill: #d3d3d3
+			mix-blend-mode: multiply
+		&-4
+			fill: #435a6e
+		&-5, &-7
+			fill: #e53045
+		&-6
+			fill: none
+			stroke-width: 4px
+		&-6,&-7,&-8
+			stroke: #fff
+			stroke-miterlimit: 10
+		&-8
+			fill: #717171
+		&-7,&-8
+			stroke-width: 2px
+	&__buttons
+		@include media(768px)
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-top: 30px
+		@include media(480px)
+			flex-direction: column
+			align-items: flex-end
+	&__dots
+		line-height: 0.8
+		@include media(480px)
+			margin-bottom: 30px
+	&__arrows
+
+.target
+	position: relative
+	z-index: 1
+	&-s
+		@include bg('target-bg.jpg')
+		@include media(1200px)
+			@include bg('target-bg-tablet.jpg')
+	&__title
+	&__subtitle
+		@extend %text2
+		margin-bottom: 50px
+		@include media(768px)
+			margin-bottom: 30px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		@include media(768px)
+			justify-content: space-around
+	&__item
+		width: 260px
+		cursor: pointer
+		margin-bottom: 40px
+		display: flex
+		flex-direction: column
+		@include media($min-width: 1201px)
+			&:not(:nth-child(4n))
+				margin-right: 30px
+			&:nth-child(n+5)
+				.target__image
+					order: -1
+					margin: 0 0 25px 100px
+			&:nth-child(2), &:nth-child(6)
+				.target__icon
+					margin-left: 5px
+		@include media(1200px, 768px)
+			&:not(:nth-child(3n))
+				margin-right: 30px
+		@include media(992px)
+			width: 220px
+		@include media(768px)
+			width: 47%
+			margin-bottom: 20px
+			flex-direction: row
+			align-items: center
+			&:last-child
+				margin-bottom: 0
+		@include media(600px)
+			width: 100%
+		@include media($min-width: 769px)
+			&:hover
+				.target__image
+					border-color: $main-color
+				.target__border
+					stroke-dasharray: 600 600
+					&-1
+						transition: .3s .1s
+					&-2
+						transition: .1s .3s
+					&-3
+						transition: .1s
+	&__subblock
+		&.slick-slide
+			display: flex
+			flex-wrap: wrap
+			align-items: flex-start
+			justify-content: space-between
+	&__block
+		position: relative
+		display: inline-block
+	&__text
+		@extend %text1
+		position: relative
+		z-index: 1
+		max-width: 100%
+		flex: 1 1 auto
+		display: inline-block
+		span
+			display: inline
+			@include media(768px)
+				display: inline-block
+	&__image
+		line-height: 0
+		@include size(98px)
+		border-radius: 50%
+		display: flex
+		transition: .3s
+		align-items: center
+		justify-content: center
+		border: 1px solid $border-color
+		background-color: #fff
+		margin-top: 25px
+		@include media(1200px)
+			order: -1
+			margin-top: 0
+			margin-bottom: 25px
+		@include media(768px)
+			@include size(55px)
+			margin-bottom: 0
+			flex: 0 0 auto
+			margin-right: 15px
+	&__icon
+		@include size(65px)
+		@include media(768px)
+			@include size(38px)
+	&__border
+		@include size(120%, 200%)
+		fill: none
+		stroke: #000
+		z-index: -1
+		stroke-width: 1px
+		@include cxy
+		stroke: $main-color
+		position: absolute
+		transition: 0s
+		margin-top: -5px
+		stroke-dasharray: 0 600
+		@include media(768px)
+			display: none
+		&-1
+			stroke-width: 4px
+	&__btn
+	&__buttons
+		@extend .suit__buttons
+		@include media(768px)
+			margin-bottom: 30px
+	&__dots
+		@extend .suit__dots
+	&__arrows
+
+.programm
+	position: relative
+	z-index: 1
+	&-s
+		background-color: $second-light-color
+	&__title
+	&__descr
+		@extend %text2
+		margin-bottom: 70px
+		@include media(768px)
+			margin-bottom: 30px
+	&__slider
+	&__list
+		&-nav
+			display: flex
+			justify-content: space-between
+			border-bottom: 1px solid $main-gray-color
+			padding-bottom: 10px
+			@include media(992px)
+				padding-bottom: 0
+				border: none
+		&-block
+			margin-top: 40px
+			@include media(992px)
+				margin-top: 20px
+			.slick-track
+				display: flex
+	&__item
+		&-nav
+			@extend %title5
+			cursor: pointer
+			color: $second-dark-color
+			position: relative
+			width: 165px
+			@include media(1200px)
+				width: auto
+			@include media($min-width: 769px)
+				&:hover
+					color: $main-color
+			&.active, &.slick-current
+				color: $main-color
+				&::after
+					transform: scaleX(1)
+			&.slick-slide
+				display: flex
+				height: auto
+				align-items: center
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: -11px
+				height: 2px
+				transition: .3s
+				background-color: $main-color
+				width: 165px
+				transform: scaleX(0)
+				transform-origin: left
+				@include media(1200px)
+					width: 100%
+				@include media(992px)
+					display: none
+		&-block
+			@include media($min-width: 993px)
+				&:not(:first-child)
+					display: none
+			&.slick-slide
+				display: flex
+				height: auto
+				@include media(480px)
+					height: 100%
+			&.active, &.slick-active
+				.programm__subitem-text, .programm__image
+					&::before, &::after
+						left: 100%
+						transition-delay: 0s
+	&__block
+		display: flex
+		justify-content: space-between
+		width: 100%
+		&_right
+			margin-bottom: 30px
+			@include media(992px)
+				display: none
+	&__numb
+		@include tr(.3s)
+		@include media(992px)
+			display: none
+	&__text
+		@include tr(.3s)
+		margin-top: 10px
+		max-width: 170px
+		@include media(992px)
+			margin-top: 0
+	&__sublist
+		padding-left: 23px
+		&:not(:last-child)
+			margin-bottom: 30px
+		@include media(768px)
+			flex: 1 1 auto
+		&_flex
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			.programm__subitem
+				width: 360px
+				max-width: 100%
+				@include media(1200px)
+					width: 250px
+	&__subitem
+		position: relative
+		line-height: 1.2
+		&::before
+			content: ''
+			top: 4px
+			left: -23px
+			position: absolute
+			@include size(7px)
+			background-color: $second-dark-color
+		&-text	
+			@extend %hover-image
+			display: inline-block
+			&::before, &::after
+				transition-delay: .1s
+				@include media(768px)
+					display: none
+	&__subtitle
+		@extend %title5
+		width: 100%
+		margin-bottom: 5px
+	&__image
+		border-radius: 3px
+		overflow: hidden
+		flex: 0 0 auto
+		line-height: 0
+		margin-bottom: 25px
+		@extend %hover-image
+		&-pict
+			@include media(480px)
+				max-width: 100%
+	&__btn
+		margin-top: 40px
+		@include media(1200px)
+			margin-top: 20px
+		@include media(480px)
+			margin-top: 0
+	&__buttons
+		@include media(992px)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-top: 20px
+		@include media(480px)
+			flex-direction: column
+			align-items: flex-end
+			margin-bottom: 50px
+	&__dots
+		@extend .suit__dots
+	&__arrow
+
+@function video($w)
+	@return $w / 1.6
+
+.aside-block
+	border-radius: 3px
+	width: 260px
+	padding: 25px 20px
+	box-shadow: 0px 0px 20px 0px rgba(113, 113, 113, 0.2)
+
+.education
+	&-s
+		padding-bottom: 0
+	&__title
+	&__block
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+		margin-top: 50px
+		@include media(992px)
+			justify-content: space-between
+		@include media(768px)
+			margin-top: 40px
+		&-video
+			@include size(850px, video(850px))
+			line-height: 0
+			margin-right: 30px
+			@include media(1200px)
+				@include size(670px, video(670px))
+			@include media(992px)
+				margin-right: 0
+				order: -1
+				@include size(730px, video(730px))
+			@include media(768px)
+				@include size(100%, video(96vw))
+		&-text
+			@include media(992px)
+				margin-top: 30px
+				width: 300px
+			@include media(768px)
+				max-width: 48%
+			@include media(480px)
+				max-width: 100%
+				order: 1
+				width: 100%
+	&__video
+	&__text
+		@extend %text1
+		@include media(480px)
+			width: 100%
+		&_up
+			text-transform: uppercase
+		&_bold
+			font-weight: 700
+			@include media(480px)
+				display: block
+	&__subblock
+		width: 270px
+		display: flex
+		flex-direction: column
+		margin-top: 50px
+		&:not(:last-child)
+			margin-right: 20px
+			@include media(768px)
+				margin-right: 0
+		@include media(1200px, 769px)
+			&:not(:last-child)
+				width: 320px
+				margin-right: 30px
+			&:last-child
+				width: 260px
+		@include media(992px)
+			margin-top: 30px
+			&_first
+				order: -1
+			&:last-child
+				width: 280px
+		@include media(768px, 481px)
+			max-width: 48%
+		@include media(480px)
+			width: 100%
+			flex-direction: row
+			&:last-child
+				width: auto
+	&__icon
+		@include size(64px)
+		fill: $main-dark-color
+		margin-bottom: 25px
+		flex: 0 0 auto
+		@include media(480px)
+			margin-bottom: 0
+			margin-right: 10px
+			@include size(54px)
+
+.slider
+	&__arrows
+		display: flex
+		justify-content: flex-end
+	&__dots
+		display: flex
+		justify-content: flex-end
+		@include media(768px)
+			justify-content: center
+		li
+			$ml: 50px
+			$ml2: 40px
+			@include tr(.3s)
+			display: none
+			&:not(:first-child)
+				margin-left: $ml
+				@include media(480px)
+					margin-left: $ml2
+			&.slick-active
+				color: $main-color
+			&:first-child,
+			&:last-child,
+			&.slick-active
+				display: block !important
+			&:first-child.slick-active ~ li:nth-child(-n+3),
+			&:first-child.slider_active ~ li:nth-child(-n+3),
+			&.slick-active:nth-last-child(-n+3) ~ li:nth-last-child(-n+3),
+			&.slider_active:nth-last-child(-n+3) ~ li:nth-last-child(-n+3)
+				display: block
+			&:nth-last-child(-n+3)
+				display: block
+			&.slick-active
+				& ~ li:nth-child(-n+3)
+					display: block
+				& ~ li:nth-last-child(-n+3)
+					display: none
+					&:before
+						display: none
+			&:nth-child(3)
+				&:after
+					margin-left: $ml
+					@include ellipsis(false)
+					@include media(480px)
+						margin-left: $ml2
+			&:nth-last-child(3)
+				&:before
+					margin-right: $ml
+					@include ellipsis(false)
+					@include media(480px)
+						margin-right: $ml2
+			&.slider_active:nth-child(-n+2)
+				display: block
+			&.slick-active
+				&:before, &:after
+					@include ellipsis(false)
+				&:before
+					margin-right: $ml
+					@include media(480px)
+						margin-right: $ml2
+				&:after
+					margin-left: $ml
+					@include media(480px)
+						margin-left: $ml2
+				&:first-child, 
+				&:last-child, 
+				&:nth-child(-n+2), 
+				&:nth-last-child(-n+2)
+					&:before, &:after
+						display: none
+				&:nth-child(-n+3)
+					&:before
+						display: none
+				&:nth-last-child(-n+3)
+					&:after
+						display: none
+			
+		button
+			@extend %text1
+			background: none
+			border: none
+			color: inherit
+	&__button
+		background-color: $main-color
+		padding: 13px
+		line-height: 0
+		border: none
+		@include tr(.3s)
+		&.slick-disabled
+			background-color: $second-dark-color
+		&:hover
+			&:not(.slick-disabled)
+				background-color: $main-dark-color
+		&_prev
+			margin-right: 10px
+			svg
+				transform: scaleX(-1)
+		&_next
+		svg
+			fill: #fff
+			@include size(24px, 14px)
+
+.homework
+	&-s
+	&__subtitle
+		@extend %text2
+		max-width: 300px
+		@include media(768px)
+			max-width: 250px
+	&__block
+		margin-top: 55px
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+		justify-content: space-between
+		@include media(768px)
+			margin-top: 40px
+		&-slider
+			width: 850px
+			@include media(1200px)
+				width: 640px
+			@include media(992px)
+				width: 100%
+		&-text
+			@include media(992px)
+				margin-top: 30px
+				width: 100%
+	&__slider
+		width: 726px
+		margin: auto
+		position: relative
+		z-index: 1
+		margin-top: 20px
+		@include media(1200px)
+			width: 100%
+			margin-top: 0
+		&::after
+			z-index: -1
+			content: url('../img/tablet.jpg')
+			position: absolute
+			top: -20px
+			left: -61px
+			@include media(1200px)
+				display: none
+	&__item
+		overflow: hidden
+		height: 393px
+		@include media(1200px)
+			height: 365px
+		@include media(768px)
+			height: 56vw
+		&-img
+			max-width: 120%
+	&__buttons
+		margin-top: 30px
+		@include media(768px)
+			display: flex
+			justify-content: space-between
+			align-items: center
+		@include media(480px)
+			flex-direction: column
+			align-items: flex-end
+	&__dots
+		@extend .suit__dots
+	&__arrows
+	&__btn
+		margin-top: 30px
+	&__text
+		@extend %text1
+		&:not(:first-child)
+			margin-top: 15px
+
+.speaker
+	&-s
+	&__block
+		display: flex
+		justify-content: space-between
+		@include media(992px)
+			flex-wrap: wrap
+		&-img
+			line-height: 0
+			@include media(992px)
+				margin-bottom: 30px
+				max-height: 400px
+				max-width: 300px
+				overflow: hidden
+				width: 50%
+			@include media(700px)
+				@include size(200px)
+				border-radius: 50%
+				display: flex
+				justify-content: center
+				align-items: flex-start
+		&-text
+			width: 50%
+			flex-direction: column
+			display: flex
+			align-items: flex-start
+			@include media(992px)
+				width: 50%
+			@include media(700px)
+				width: 100%
+		&-comp
+			@include media(992px)
+				width: 100%
+	&__img
+		max-width: 100%
+		@include media(700px)
+			max-width: 150%
+			margin-left: -30px
+	&__title
+		margin-bottom: 70px
+		line-height: 1
+		@include media(992px)
+			margin-bottom: 50px
+		@include media(768px)
+			margin-bottom: 40px
+		@include media(480px)
+			margin-bottom: 20px
+	&__name
+		@extend %title4
+		margin-bottom: 25px
+	&__list
+		padding-left: 23px
+		flex: 1 1 auto
+		margin-bottom: 30px
+		&-vert
+			display: flex
+			align-items: flex-start
+			@include media(992px)
+				justify-content: space-between
+			@include media(768px)
+				flex-wrap: wrap
+	&__item
+		@extend .programm__subitem
+		@extend %text1
+		line-height: 1.5
+		@include media(992px)
+			br
+				display: none
+		&::before
+			top: 7px
+		&-vert
+			flex: 0 1 33%
+			@include media(992px)
+				flex-basis: auto
+				br
+					display: none
+			@include media(768px)
+				&:not(:last-child)
+					margin-bottom: 15px
+			@include media(480px)
+				display: flex
+				align-items: center
+	&__text
+		@extend %text1
+		&-subtitle
+			@extend %text2
+			margin-bottom: 35px
+			@include media(992px)
+				margin-bottom: 15px
+	&__icon
+		@include size(37px)
+		fill: $main-dark-color
+		@include media(480px)
+			margin-right: 15px
+			@include size(25px)
+	&__line
+		display: block
+		margin-bottom: 30px
+		width: 2000px
+		height: 1px
+		background-color: $main-gray-color
+		@include media(992px)
+			display: none
+	&__btn
+		margin-top: 50px
+
+.result
+	&-s
+		padding-bottom: 0
+		@include media(992px)
+			overflow: hidden
+	&__title
+	&__block
+		margin-top: 50px
+		position: relative
+		z-index: 1
+		padding-bottom: 100px
+		@include media(768px)
+			display: flex
+			flex-direction: column
+			padding-bottom: 200px
+			margin-top: 40px
+	&__svg
+		@function result($w)
+			@return $w / 1.32
+		@include size(500px, result(500px))
+		position: absolute
+		left: -140px
+		line-height: 0
+		bottom: 0
+		z-index: 1
+		@include media(1200px)
+			@include size(450px, result(450px))
+		@include media(992px)
+			bottom: -100px
+			@include size(400px, result(400px))
+			left: -100px
+		&-1
+		&-2
+			fill: #e53045
+		&-3
+			fill: #e5e5e5
+		&-4
+			fill: #ddd
+		&-5
+			fill: #3a3a3a
+		&-6
+			fill: #ffd3ba
+		&-7
+			fill: #f2f2f2
+		&-8
+			fill: #717171
+	&__slider
+		margin-left: 165px
+		@include media(1200px)
+			margin-left: 105px
+		@include media(992px)
+			margin-left: 0
+	&__item
+		padding: 15px
+	&__subblock
+		display: flex
+		align-items: flex-start
+		@include media(992px)
+			flex-wrap: wrap
+			justify-content: space-between
+		@include media(700px)
+			flex-direction: column
+		&-about
+			flex: 1 1 auto
+			@include media(992px)
+				order: 1
+				display: flex
+				justify-content: space-between
+			@include media(700px)
+				flex-direction: column
+		&_bottom
+			align-items: flex-end
+		&-profit
+			padding: 40px 20px
+			flex: 0 0 auto
+			@include media(992px)
+				width: 360px
+				padding: 20px
+			@include media(700px)
+				order: 1
+				width: 100%
+				margin-top: 25px
+			&_before
+			&_after
+				margin-top: 20px
+		&-made
+			margin-top: 50px
+			@include media(992px)
+				margin-top: 25px
+				max-width: 360px
+			@include media(700px)
+				max-width: 100%
+		&-name
+			@include media(992px)
+				max-width: 290px
+			@include media(700px)
+				max-width: 100%
+	&__image
+		filter: grayscale(100%)
+		border-radius: 50%
+		overflow: hidden
+		margin-right: 30px
+		flex: 0 0 auto
+		@include size(165px)
+		&-photo
+			width: 100%
+	&__name
+		@extend %title4
+		color: $main-color
+		margin-top: 25px
+		display: inline-block
+	&__city
+		@extend %text2
+		color: $second-dark-color
+	&__employ
+		color: $second-dark-color
+		max-width: 400px
+		@extend %text1
+		@include media(700px)
+			max-width: 100%
+	&__sublist
+		padding-left: 23px
+	&__subitem
+		@extend .speaker__item
+		max-width: 430px
+		@include media(700px)
+			max-width: 100%
+	&__text
+		@extend %text1
+		color: $second-dark-color
+		&-title
+			@extend %title5
+			color: $main-dark-color
+		&-after
+			@extend %title5
+			margin-top: 5px
+			span
+				@extend %title3
+		&-made
+			@extend %text2
+			margin-bottom: 15px
+	&__buttons
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 760px
+		margin-left: auto
+		margin-top: 60px
+		position: relative
+		z-index: 11
+		@include media(1200px)
+			max-width: 650px
+		@include media(992px)
+			max-width: 500px
+			margin-top: 30px
+		@include media(768px)
+			max-width: 100%
+			padding-left: 15px
+			width: 100%
+		@include media(480px)
+			flex-direction: column
+			align-items: flex-end
+	&__dots
+		position: relative
+		@extend .suit__dots
+	&__arrows
+
+.numb
+	&-s
+		@include bg('numb-bg.jpg')
+		overflow: hidden
+	&__list
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		width: 100%
+		@include media(1200px)
+			flex-wrap: wrap
+	&__item
+		max-width: 340px
+		color: #fff
+		@include media(1200px)
+			max-width: 100%
+			&:not(:last-child)
+				margin-bottom: 30px
+		&:nth-child(3)
+			.numb__icon
+				margin-left: -5px
+	&__img
+		border-radius: 50%
+		display: flex
+		align-items: center
+		margin-bottom: 35px
+		@include media(1200px)
+			display: none
+	&__icon
+		fill: #fff
+		flex: 0 0 auto
+		@include size(125px)
+	&__block
+		color: #fff
+	&__subtitle
+		@extend %title4
+	&__descr
+		@extend %text2
+		line-height: 1.3
+
+.packet
+	position: relative
+	z-index: 1
+	&-s
+		background-color: #ededed
+	&__title
+	&__img
+		position: absolute
+		top: -65px
+		right: 120px
+		z-index: -1
+		@include media(1200px)
+			width: 220px
+		@include media(992px)
+			right: 0
+		@include media(768px)
+			display: none
+	&__list
+		display: flex
+		justify-content: space-between
+		margin-top: 85px
+		@include media(1200px)
+			margin-top: 60px
+		@include media(768px)
+			flex-direction: column
+			margin-top: 40px
+	&__item
+		width: 555px
+		max-width: 100%
+		display: flex
+		flex-direction: column
+		@include media(1200px)
+			width: 460px
+		@include media(992px)
+			width: 360px
+		@include media(768px)
+			&.slick-slide
+				height: auto
+				display: flex
+		&-top
+			background-color: $second-dark-color
+			text-align: center
+			color: #fff
+			padding: 18px 5px
+		&-middle
+			display: flex
+			flex-direction: column
+			flex: 1 1 auto
+			background-color: #fff
+			border: 1px solid #ddd
+			border-top: none
+		&-bottom
+			margin-top: 10px
+	&__subtitle
+		@extend %title4
+		padding-left: 80px
+		text-align: left
+		line-height: 0.8
+	&__sublist
+		flex: 1 1 auto
+		padding: 30px
+		@include media(480px)
+			padding: 20px
+	&__subitem
+		display: flex
+		align-items: center
+		&:not(:first-child)
+			margin-top: 5px
+		&-text
+			padding-left: 55px
+	&__icon
+		@include size(30px)
+		flex: 0 0 auto
+		margin-right: 25px
+	&__text
+		@extend %text1
+	&__descr
+		@extend %text1
+		color: $second-dark-color
+	&__price
+		text-align: left
+		border-top: 1px solid #ddd
+		padding: 30px 30px 30px 100px
+		@include media(768px)
+			text-align: center
+			padding: 30px
+		@include media(480px)
+			padding: 20px
+		&-block
+			&:not(:last-child)
+				margin-bottom: 20px
+		&-numb
+			@extend %text2
+		&-descr
+	&__btn
+		width: 100%
+	&__buttons
+		@extend .suit__buttons
+	&__dots
+		@extend .suit__dots
+	&__arrows
+
+.benefit
+	&-s
+		padding-bottom: 0
+		@include media(480px)
+			padding-bottom: 20px
+	&__title
+	&__nav
+		display: flex
+		margin-top: 70px
+		padding-bottom: 10px
+		border-bottom: 1px solid #ddd
+		@include media(1200px)
+			margin-top: 60px
+		@include media(768px)
+			margin-top: 50px
+		&-item
+			@extend %title5
+			color: $second-dark-color
+			cursor: pointer
+			position: relative
+			@include tr(.3s)
+			width: 165px
+			margin-right: 30px
+			@include media(1200px)
+				width: auto
+			&:hover, &.active
+				color: $main-color
+			&.active
+				&::after
+					transform: scaleX(1)
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: -11px
+				height: 2px
+				transition: .3s
+				background-color: $main-color
+				width: 100%
+				transform: scaleX(0)
+				transform-origin: left
+	&__block
+		display: flex
+		margin-top: 20px
+		justify-content: space-between
+		@include media(768px)
+			flex-direction: column
+		&-discont
+			width: 750px
+			max-width: 100%
+			@include media(1200px)
+				width: 650px
+			@include media(992px)
+				width: 440px
+				margin-right: 20px
+			@include media(768px)
+				width: 100%
+				margin-right: 0
+		&-total
+			width: 360px
+			padding: 45px 50px
+			border: 1px solid #ddd
+			border-radius: 3px
+			@include media(1200px)
+				width: 290px
+				padding: 45px 30px
+				display: flex
+				flex-direction: column
+				justify-content: center
+			@include media(768px)
+				width: 100%
+				margin-top: 10px
+				padding: 20px
+				align-items: center
+				text-align: center
+			&:not(.active)
+				display: none
+	&__list
+	&__item
+		border: 1px solid #ddd
+		border-radius: 3px
+		transition: .3s
+		&:not(:first-child)
+			margin-top: 10px
+		&.active, &:hover
+			border-color: $main-color
+	&__label
+		display: flex
+		align-items: center
+		cursor: pointer
+		padding: 12px 18px
+		justify-content: space-between
+		@include media(480px)
+			align-items: center
+			padding: 6px 12px
+		&-input
+			display: none
+			&:checked ~ .benefit__check .benefit__check-color
+				stroke-dasharray: 60 60
+			&:disabled
+				& ~ .benefit__check
+					fill: #f3f3f3
+					& .benefit__check-stroke
+						stroke: #cdcdcd
+				& ~ .benefit__text
+					color: $second-dark-color
+	&__check
+		fill: none
+		flex: 0 0 auto
+		margin-right: 15px
+		@include size(25px)
+		&-stroke
+			stroke: #000
+			stroke-width: .5
+		&-color
+			stroke: $main-color
+			stroke-width: 7
+			transform-origin: center
+			transform: rotate(-90deg)
+			stroke-dasharray: 0 60
+			@include tr(.3s)
+	&__text
+		flex: 1 1 auto
+	&__discont
+		@extend %text1
+		margin-left: 10px
+		color: $main-color
+	&__subblock
+		&:not(:first-child)
+			margin-top: 50px
+			@include media(768px)
+				margin-top: 20px
+	&__descr
+		@extend %text1
+		color: #717171
+	&__price
+		margin-top: 10px
+		@extend %text2
+		&_color
+			color: $main-color
+		&-old
+		&_new
+	&__btn
+		margin-top: 20px
+
+@import "components/_form"
+
+$color: $main-dark-color
+$wave-color: $main-color
+
+.social
+	padding: 0
+	list-style: none
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 0
+	&__item
+		&:not(:last-child)
+			margin-right: 40px
+			@include media(480px)
+				margin-right: 10px
+		@for $i from 1 through 4
+			&:nth-child(#{$i + 1})
+				.social__link
+					&::after
+						animation-delay: $i * 1.3s
+	&__link
+		border-radius: 50%
+		border: 2px solid $main-color
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		@include size(40px)
+		transition: .3s
+		position: relative
+		z-index: 1
+		&:hover
+			border-color: $wave-color
+			background-color: $wave-color
+			.social__svg
+				fill: #fff
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			width: 100%
+			height: 100%
+			transform: scale(1.1)
+			transform-origin: center
+			border-radius: 50%
+			z-index: -1
+			border: 1px solid $wave-color
+			box-shadow: 0 0 8px 2px rgba($wave-color, 0.6)
+			animation: wave 5s infinite
+	&__svg
+		@include size(20px)
+		fill: $main-color
+		transition: .3s
+
+@keyframes wave
+	0%
+		opacity: 1
+		transform: scale(1.1)
+	35%
+		transform: scale(1.5)
+	50%
+		opacity: 0
+		transform: scale(1.5)
+	100%
+		opacity: 0
+		transform: scale(1.5)
+
+.dropdown
+	padding: 10px 18px
+	width: 100%
+	font-size: 16px
+	border: 1px solid #ddd
+	background-color: #fff
+	color: $second-dark-color
+	@include tr(.3s)
+	position: relative
+	cursor: pointer
+	text-align: left
+	&.open
+		.dropdown__select
+			transform: translateY(-50%) rotate(-180deg)
+			fill: $main-dark-color
+	&__text
+	&__field
+		border-radius: 4px
+		padding: 10px
+		display: none
+		text-align: left
+		border: 1px solid #f0f0f0
+		position: absolute
+		background-color: #fff
+		top: 120%
+		left: -1px
+		width: 100%
+		margin: 0
+		z-index: 100
+		overflow-y: auto
+		max-height: 180px
+	&__item
+		padding: 8px
+		transition: .3s
+		&:hover
+			background-color: $second-light-color
+			color: $main-dark-color
+	&__select
+		position: absolute
+		@include cy
+		right: 20px
+		fill: $main-color
+		@include size(12px, 7px)
+		@include tr(.3s)
+
+.address
+	max-width: 560px
+	margin: 0 auto
+	text-align: center
+	&-s
+	&__title
+		@extend %title3
+	&__box
+	&__block
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 70px
+		@include media(768px)
+			margin-top: 30px
+		@include media(480px)
+			flex-direction: column
+		&_float
+			margin-top: 70px
+			@include media(768px)
+				margin-top: 50px
+	&__icon
+		@include size(28px, 24px)
+		flex: 0 0 auto
+		margin-top: 4px
+		margin-right: 15px
+	&__place
+		@extend %text2
+		text-align: center
+		display: inline
+		&_city
+		&_street
+	&__text
+		@extend %text1
+		flex: 0 0 auto
+		display: inline-block
+		@include media(480px)
+			margin-bottom: 20px
+	&__select
+		margin-left: 20px
+		width: 310px
+		max-width: 100%
+		@include media(480px)
+			margin-left: 0
+	&__item
+	&__link
+		@extend %text1
+		color: $main-color
+		margin-top: 90px
+		display: inline-block
+		@include media(768px)
+			margin: 50px auto 0
+			max-width: 300px
+		@include media(480px)
+			max-width: 220px
+	&__social
+		margin-top: 40px
+		@include media(480px)
+			max-width: 290px
+			justify-content: space-between
+			margin: 40px auto 0
+	&__arrtop
+		position: absolute
+		right: 15px
+		bottom: 0
+		line-height: 0
+		transition-delay: 0.8s
+		@include media(480px)
+			position: relative
+			right: auto
+			margin-top: 30px
+			display: inline-block
+			
+		&-icon
+			fill: $main-dark-color
+			@include size(40px)
+			@include tr(.3s)
+			&:hover
+				fill: $main-color
+
+@import "components/_modal"
+

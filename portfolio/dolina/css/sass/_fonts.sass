@@ -1,0 +1,14 @@
+@mixin fonts ($fontName, $fontWay, $weight: normal, $style: normal, $display: optional)
+	@font-face 
+		font-family: '#{$fontName}'
+		src: url('../fonts/#{$fontWay}.woff2') format('woff2'),
+		url('../fonts/#{$fontWay}.woff') format('woff')
+		font-weight: $weight
+		font-style: $style
+		font-display: $display //block-для неинформативных шрифтов, optional-для несущих информацию
+
+@include fonts(Muller, Muller-Black, 900)
+@include fonts(Muller, Muller-ExtraBold, 800)
+@include fonts(Muller, Muller-Bold, 700)
+@include fonts(Muller, Muller-Regular, normal)
+@include fonts(Muller, Muller-Light, 300)

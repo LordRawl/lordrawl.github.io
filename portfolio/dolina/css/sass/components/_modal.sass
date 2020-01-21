@@ -1,0 +1,43 @@
+$modal-bgcolor: #fff
+$modal-margin: 20px
+
+$close-size: 30px
+$close-color: #fff
+
+.modal
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 999
+	display: none
+	position: fixed
+	overflow-y: auto
+	background-color: rgba(0,0,0,0.7)
+	&__container
+		top: $modal-margin
+		left: 50%
+		max-width: 90%
+		@include tr(.3s)
+		position: absolute
+		margin-bottom: $modal-margin
+		background-color: $modal-bgcolor
+		transform: translate(-50%) scale(.8)
+		&.active
+			transform: translate(-50%) scale(1)
+	&__close
+		position: absolute
+		top: 0px
+		line-height: 0
+		right: - $close-size
+		@include tr(.3s)
+		cursor: pointer
+		@include media(768px)
+			top: -25px
+			right: 10px
+		&:hover
+			transform: rotate(90deg)
+		&-svg
+			fill: $close-color
+			width: $close-size
+			height: $close-size

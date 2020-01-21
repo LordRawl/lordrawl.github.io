@@ -1,0 +1,24 @@
+mixin form(title, descr)
+	.form
+		form
+			if title && descr
+				h3.form__title= title
+				p.form__subtitle= descr
+			-
+				var inputs = {
+					'Имя': 'text',
+					'Email': 'email',
+					'Город ': 'text',
+					'Телефон': 'tel'
+				};
+			each type, ph in inputs
+				.form__block
+					input(type=type, placeholder=ph, autocomplete="off").form__input
+			button(type="submit").btn.form__btn Оставить заявку
+			label.form__label
+				input(type="checkbox" checked).form__checkbox
+				svg(viewBox="0 0 30.46 30.46").checkbox
+					polyline(points="9.21 15.51 12.98 19.32 21.33 10.97").checkbox__stroke
+					circle(cx="15.23" cy="15.23" r="14.23").checkbox__box
+				span Я согласен на обработку моих персональных данных в соответствии с 
+					a(href="http://likebz.org/docs/dogovo.pdf" target="_blank").form__label-link Условиями

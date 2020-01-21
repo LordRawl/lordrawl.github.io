@@ -1,0 +1,24 @@
+header.navbar-s
+	.container
+		.navbar
+			.navbar__geo.geo
+				svg.geo__icon(viewBox="0 0 38.51 33")
+					path(d='M1.5,14.58,37,1.5s-14.61,30-14.74,30C19.06,21.76,13.42,13.17,1.5,14.58Z')
+				p.geo__city Москва
+			a(href="http://likecentre.ru" title="Перейти на главную страницу").logo-new
+				svg.logo-new__svg
+					use(xlink:href="#logo")
+			label.navbar__toggle.toggle
+				input(type="checkbox").toggle__check
+				.toggle__btn
+					span.toggle__line.toggle__line_1
+					span.toggle__line.toggle__line_2
+					span.toggle__line.toggle__line_3
+				ul.toggle__field
+					+toggle__item('target', 'Чему научишься на курсе')
+					+toggle__item('programm', 'Программа')
+					+toggle__item('education', 'Как проходит обучение')
+					+toggle__item('speaker', 'Спикеры')
+					+toggle__item('result', 'Истории выпускников')
+					+toggle__item('packet', 'Цена')
+					+toggle__item('form', 'Оставить заявку')
