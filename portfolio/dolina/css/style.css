@@ -284,13 +284,13 @@ template {
     .main__subtitle, .programm__item-nav, .programm__subtitle, .result__text-title, .result__text-after, .benefit__nav-item {
       font-size: 16px; } }
 
-.suit__text, .target__text, .education__text, .slider__dots button, .homework__text, .speaker__item, .result__subitem, .speaker__text, .result__employ, .result__text, .packet__text, .packet__descr, .benefit__discont, .benefit__descr, .address__text, .address__link {
+html, .suit__text, .target__text, .education__text, .slider__dots button, .homework__text, .speaker__item, .result__subitem, .speaker__text, .result__employ, .result__text, .packet__text, .packet__descr, .benefit__discont, .benefit__descr, .address__text, .address__link {
   font-size: 18px; }
   @media only screen and (max-width: 768px) {
-    .suit__text, .target__text, .education__text, .slider__dots button, .homework__text, .speaker__item, .result__subitem, .speaker__text, .result__employ, .result__text, .packet__text, .packet__descr, .benefit__discont, .benefit__descr, .address__text, .address__link {
+    html, .suit__text, .target__text, .education__text, .slider__dots button, .homework__text, .speaker__item, .result__subitem, .speaker__text, .result__employ, .result__text, .packet__text, .packet__descr, .benefit__discont, .benefit__descr, .address__text, .address__link {
       font-size: 17px; } }
   @media only screen and (max-width: 480px) {
-    .suit__text, .target__text, .education__text, .slider__dots button, .homework__text, .speaker__item, .result__subitem, .speaker__text, .result__employ, .result__text, .packet__text, .packet__descr, .benefit__discont, .benefit__descr, .address__text, .address__link {
+    html, .suit__text, .target__text, .education__text, .slider__dots button, .homework__text, .speaker__item, .result__subitem, .speaker__text, .result__employ, .result__text, .packet__text, .packet__descr, .benefit__discont, .benefit__descr, .address__text, .address__link {
       font-size: 16px; } }
 
 .target__subtitle, .programm__descr, .homework__subtitle, .speaker__text-subtitle, .result__city, .result__text-made, .numb__descr, .packet__price-numb, .benefit__price, .form__subtitle, .address__place {
@@ -303,7 +303,7 @@ template {
       font-size: 22px; } }
   @media only screen and (max-width: 480px) {
     .target__subtitle, .programm__descr, .homework__subtitle, .speaker__text-subtitle, .result__city, .result__text-made, .numb__descr, .packet__price-numb, .benefit__price, .form__subtitle, .address__place {
-      font-size: 22px; } }
+      font-size: 20px; } }
 
 .programm__subitem-text, .programm__image {
   position: relative;
@@ -334,8 +334,7 @@ template {
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 16px; }
+          box-sizing: border-box; }
 
 body {
   line-height: 1.4;
@@ -494,6 +493,11 @@ input {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   margin-top: 20px;
   min-height: 80px; }
   @media only screen and (max-width: 480px) {
@@ -735,6 +739,9 @@ input {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
+  @media only screen and (max-width: 480px) {
+    .btn {
+      font-size: 18px; } }
   .btn:hover {
     background-color: #1e1e1e;
     color: #fff;
@@ -860,40 +867,57 @@ section {
     bottom: 0;
     line-height: 0;
     z-index: -1; }
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 992px) and (min-width: 769px) {
       .main__picture {
         -webkit-transform: scale(0.8);
             -ms-transform: scale(0.8);
                 transform: scale(0.8); } }
     @media only screen and (max-width: 768px) {
       .main__picture {
-        -webkit-transform: scale(0.6);
-            -ms-transform: scale(0.6);
-                transform: scale(0.6);
         right: -130px; } }
   .main__slide {
     position: absolute; }
     .main__slide_1 {
       bottom: 355px;
       right: 300px; }
+      @media only screen and (max-width: 768px) {
+        .main__slide_1 {
+          bottom: 325px;
+          right: 230px; } }
       @media only screen and (max-width: 480px) {
         .main__slide_1 {
-          bottom: 305px; } }
+          bottom: 205px;
+          right: 150px; } }
     .main__slide_2 {
       bottom: 285px;
       right: 270px; }
+      @media only screen and (max-width: 768px) {
+        .main__slide_2 {
+          bottom: 250px;
+          right: 180px; } }
       @media only screen and (max-width: 480px) {
         .main__slide_2 {
-          bottom: 235px; } }
+          bottom: 175px;
+          right: 120px; } }
     .main__slide_3 {
       bottom: 255px;
       right: 90px; }
+      @media only screen and (max-width: 768px) {
+        .main__slide_3 {
+          bottom: 220px;
+          right: 40px; } }
       @media only screen and (max-width: 480px) {
         .main__slide_3 {
-          bottom: 205px; } }
+          bottom: 125px;
+          right: 30px; } }
     .main__slide_4 {
       bottom: -2px;
       right: 0; }
+      @media only screen and (max-width: 768px) {
+        .main__slide_4 {
+          right: -5px; } }
+  .main__img {
+    display: inline-block; }
 
 .suit {
   position: relative;
@@ -1095,7 +1119,7 @@ section {
             background-size: cover; }
     @media only screen and (max-width: 1200px) {
       .target-s {
-        background: url("../img/target-bg-tablet.jpg") center no-repeat ;
+        background: url("../img/target-bg_tablet.jpg") center no-repeat ;
         -webkit-background-size: cover;
                 background-size: cover; } }
   .target__subtitle {
@@ -2793,7 +2817,7 @@ section {
         padding: 200px 0 120px; } }
     @media only screen and (max-width: 768px) {
       .form-s {
-        background: url("../img/form-bg-mobile.jpg") top center no-repeat ;
+        background: url("../img/form-bg_mobile.jpg") top center no-repeat ;
         -webkit-background-size: cover;
                 background-size: cover;
         padding: 130px 0 70px; } }

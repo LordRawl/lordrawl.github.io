@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <!-- Гугл аналитика -->
-    <!-- Google Tag Manager--><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);		})(window,document,'script','dataLayer','GTM-WBGV6T');</script>
-    <!-- End Google Tag Manager-->
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    
-    <meta property="og:type" content="website"/>
-    <!-- Указываем ссылку на страницу-->
-    <meta property="og:url" content="http://site.ru"/>
-    <!-- Название страницы для соц сетей-->
-    <meta property="og:title" content="Название"/>
-    <!-- Превью страницы для соц сетей-->
-    <meta property="og:image" content="http://site.ru/img/preview.jpg"/>
     
     <!-- Путь до фавикона-->
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon"/>
@@ -22,7 +11,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png"/>
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"/>
     
-    <title>Название</title>
+    <title>«Долина»</title>
     
     <link rel="stylesheet" href="css/style.css"/>
     <!--[if lt IE 10]>
@@ -30,23 +19,17 @@
       Вы используете <strong>устаревший</strong> браузер.Пожалуйста,  <a href="http://browsehappy.com/">обновите его до последней версии</a>, чтобы эта страница отображалась корректно.</p><![endif]-->
   </head>
   <body>
-    <!-- Google Tag Manager (noscript)--><noscript><iframe src="https://www.googletagmanager.com/ns.ht...GV6T"; height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript)-->
     <!-- Прелоадер-->
-    <!-- .loader-->
-    <!-- 	svg.loader__img-->
-    <!-- 		use(xlink:href="#logo")-->
+    <div class="loader">
+      <svg class="loader__img">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </div>
     <!-- Тело-->
     <div class="wrapper">
       <header class="navbar-s">
         <div class="container">
-          <div class="navbar">
-            <div class="navbar__geo geo">
-              <svg class="geo__icon" viewBox="0 0 38.51 33">
-                <path d="M1.5,14.58,37,1.5s-14.61,30-14.74,30C19.06,21.76,13.42,13.17,1.5,14.58Z"></path>
-              </svg>
-              <p class="geo__city">Москва</p>
-            </div><a class="logo-new" href="http://likecentre.ru" title="Перейти на главную страницу">
+          <div class="navbar"><a class="logo-new" href="http://likecentre.ru" title="Перейти на главную страницу">
               <svg class="logo-new__svg">
                 <use xlink:href="#logo"></use>
               </svg></a>
@@ -92,10 +75,42 @@
               </ul>
               <button class="btn btn_scroll main__btn" type="button">Принять участие</button>
               <ul class="main__picture">
-                <li class="main__slide main__slide_1"><img class="main__img" src="img/main/slide-1.png" alt="Солнце"/></li>
-                <li class="main__slide main__slide_2"><img class="main__img" src="img/main/slide-2.png" alt="Горы"/></li>
-                <li class="main__slide main__slide_3"><img class="main__img" src="img/main/slide-3.png" alt="Город"/></li>
-                <li class="main__slide main__slide_4"><img class="main__img" src="img/main/slide-4.png" alt="Человек на мосту"/></li>
+                <li class="main__slide main__slide_1">
+                  <picture class="main__img">
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-1_mobile.webp" media="(max-width: 480px)" loading="auto"/>
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-1_tablet.webp" media="(max-width: 768px)" loading="auto"/>
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-1.webp" loading="auto"/>
+                    <source class="lazy" data-srcset="img/main/slide-1_mobile.png" media="(max-width: 480px)" loading="auto"/>
+                    <source class="lazy" data-srcset="img/main/slide-1_tablet.png" media="(max-width: 768px)" loading="auto"/><img class="lazy" data-src="img/main/slide-1.png" alt="Солнце" loading="auto"/>
+                  </picture>
+                </li>
+                <li class="main__slide main__slide_2">
+                  <picture class="main__img">
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-2_mobile.webp" media="(max-width: 480px)" loading="auto"/>
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-2_tablet.webp" media="(max-width: 768px)" loading="auto"/>
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-2.webp" loading="auto"/>
+                    <source class="lazy" data-srcset="img/main/slide-2_mobile.png" media="(max-width: 480px)" loading="auto"/>
+                    <source class="lazy" data-srcset="img/main/slide-2_tablet.png" media="(max-width: 768px)" loading="auto"/><img class="lazy" data-src="img/main/slide-2.png" alt="Горы" loading="auto"/>
+                  </picture>
+                </li>
+                <li class="main__slide main__slide_3">
+                  <picture class="main__img">
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-3_mobile.webp" media="(max-width: 480px)" loading="auto"/>
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-3_tablet.webp" media="(max-width: 768px)" loading="auto"/>
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-3.webp" loading="auto"/>
+                    <source class="lazy" data-srcset="img/main/slide-3_mobile.png" media="(max-width: 480px)" loading="auto"/>
+                    <source class="lazy" data-srcset="img/main/slide-3_tablet.png" media="(max-width: 768px)" loading="auto"/><img class="lazy" data-src="img/main/slide-3.png" alt="Город" loading="auto"/>
+                  </picture>
+                </li>
+                <li class="main__slide main__slide_4">
+                  <picture class="main__img">
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-4_mobile.webp" media="(max-width: 480px)" loading="auto"/>
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-4_tablet.webp" media="(max-width: 768px)" loading="auto"/>
+                    <source class="lazy" type="image/webp" data-srcset="img/main/slide-4.webp" loading="auto"/>
+                    <source class="lazy" data-srcset="img/main/slide-4_mobile.png" media="(max-width: 480px)" loading="auto"/>
+                    <source class="lazy" data-srcset="img/main/slide-4_tablet.png" media="(max-width: 768px)" loading="auto"/><img class="lazy" data-src="img/main/slide-4.png" alt="Человек на мосту" loading="auto"/>
+                  </picture>
+                </li>
               </ul>
             </div>
           </div>
@@ -409,7 +424,11 @@
                         </ul>
                       </div>
                       <div class="programm__block_right">
-                        <div class="programm__image"><img class="programm__image-pict" src="img/programm/programm-1.jpg" alt="slide"/></div>
+                        <div class="programm__image">
+                          <picture class="programm__image-pict">
+                            <source class="lazy" type="image/webp" data-srcset="img//programm/programm-1.webp" loading="lazy"/><img class="lazy" data-src="img//programm/programm-1.jpg" alt="Слайд" loading="lazy"/>
+                          </picture>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -431,7 +450,11 @@
                         </ul>
                       </div>
                       <div class="programm__block_right">
-                        <div class="programm__image"><img class="programm__image-pict" src="img/programm/programm-2.jpg" alt="slide"/></div>
+                        <div class="programm__image">
+                          <picture class="programm__image-pict">
+                            <source class="lazy" type="image/webp" data-srcset="img//programm/programm-2.webp" loading="lazy"/><img class="lazy" data-src="img//programm/programm-2.jpg" alt="Слайд" loading="lazy"/>
+                          </picture>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -455,7 +478,11 @@
                         </ul>
                       </div>
                       <div class="programm__block_right">
-                        <div class="programm__image"><img class="programm__image-pict" src="img/programm/programm-3.jpg" alt="slide"/></div>
+                        <div class="programm__image">
+                          <picture class="programm__image-pict">
+                            <source class="lazy" type="image/webp" data-srcset="img//programm/programm-3.webp" loading="lazy"/><img class="lazy" data-src="img//programm/programm-3.jpg" alt="Слайд" loading="lazy"/>
+                          </picture>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -476,7 +503,11 @@
                         </ul>
                       </div>
                       <div class="programm__block_right">
-                        <div class="programm__image"><img class="programm__image-pict" src="img/programm/programm-4.jpg" alt="slide"/></div>
+                        <div class="programm__image">
+                          <picture class="programm__image-pict">
+                            <source class="lazy" type="image/webp" data-srcset="img//programm/programm-4.webp" loading="lazy"/><img class="lazy" data-src="img//programm/programm-4.jpg" alt="Слайд" loading="lazy"/>
+                          </picture>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -497,7 +528,11 @@
                         </ul>
                       </div>
                       <div class="programm__block_right">
-                        <div class="programm__image"><img class="programm__image-pict" src="img/programm/programm-5.jpg" alt="slide"/></div>
+                        <div class="programm__image">
+                          <picture class="programm__image-pict">
+                            <source class="lazy" type="image/webp" data-srcset="img//programm/programm-5.webp" loading="lazy"/><img class="lazy" data-src="img//programm/programm-5.jpg" alt="Слайд" loading="lazy"/>
+                          </picture>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -521,7 +556,11 @@
                         </ul>
                       </div>
                       <div class="programm__block_right">
-                        <div class="programm__image"><img class="programm__image-pict" src="img/programm/programm-6.jpg" alt="slide"/></div>
+                        <div class="programm__image">
+                          <picture class="programm__image-pict">
+                            <source class="lazy" type="image/webp" data-srcset="img//programm/programm-6.webp" loading="lazy"/><img class="lazy" data-src="img//programm/programm-6.jpg" alt="Слайд" loading="lazy"/>
+                          </picture>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -541,9 +580,9 @@
               <h2 class="title education__title">Как проходит обучение</h2>
               <div class="education__block">
                 <div class="education__block-video">
-                  <video class="education__video" width="100%" height="100%" preload="auto" controls="controls" controlslist="nodownload" autoplay="autoplay" muted="muted" poster="img/poster.jpg">
-                    <source src="video/video.mp4" type="video/mp4"/>
-                    <source src="video/video.webm" type="video/webm"/>
+                  <video class="education__video" width="100%" height="100%" preload="metadata" playsinline="playsinline" pip="false" controls="controls" controlslist="nodownload" autoplay="autoplay" muted="muted" poster="img/poster.jpg">
+                    <source src="video/video.mp4" type="video/mp4" loading="lazy"/>
+                    <source src="video/video.webm" type="video/webm" loading="lazy"/>
                   </video>
                 </div>
                 <div class="education__block-text aside-block">
@@ -579,16 +618,56 @@
               <div class="homework__block">
                 <div class="homework__block-slider">
                   <ul class="homework__slider">
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-1.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-2.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-3.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-4.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-5.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-6.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-7.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-8.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-9.jpg" alt="homework"/></li>
-                    <li class="homework__item"><img class="homework__item-img" src="img/homework/hw-10.jpg" alt="homework"/></li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-1.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-1.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-2.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-2.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-3.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-3.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-4.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-4.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-5.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-5.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-6.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-6.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-7.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-7.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-8.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-8.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-9.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-9.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
+                    <li class="homework__item">
+                      <picture class="homework__item-img">
+                        <source class="lazy" type="image/webp" data-srcset="img/homework/hw-10.webp" loading="lazy"/><img class="lazy" data-src="img/homework/hw-10.jpg" alt="Домашнее задание" loading="lazy"/>
+                      </picture>
+                    </li>
                   </ul>
                   <div class="homework__buttons">
                     <div class="homework__dots"></div>
@@ -642,7 +721,11 @@
                     <button class="btn btn_scroll speaker__btn" type="button">Принять участие</button>
                   </div>
                 </div>
-                <div class="speaker__block-img"><img class="speaker__img" src="img/speaker.jpg" alt="Спикер"/></div>
+                <div class="speaker__block-img">
+                  <picture class="homework__item-img">
+                    <source class="lazy" type="image/webp" data-srcset="img//speaker.webp" loading="lazy"/><img class="lazy" data-src="img//speaker.jpg" alt="Спикер" loading="lazy"/>
+                  </picture>
+                </div>
               </div>
             </div>
           </div>

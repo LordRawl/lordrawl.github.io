@@ -1,3 +1,62 @@
+//Оптимизация загрузки изображений
+
+	if ("loading" in HTMLImageElement.prototype) {
+		var lazyImages = document.querySelectorAll("img.lazy, source.lazy");
+		console.log(1);
+		
+		lazyImages.forEach(function(img) {
+			if (img.tagName === 'IMG') {
+				img.src = img.dataset.src;
+				img.removeAttribute('data-src');
+			}	else if (img.tagName === 'SOURCE') {
+				img.srcset = img.dataset.srcset;
+				img.removeAttribute('data-srcset');
+			}
+		});
+	} else if ('IntersectionObserver' in window) {
+		console.log(2);
+		
+		var observer = new IntersectionObserver(lazyLoad, {
+			rootMargin: "200px",
+			threshold: 0.0
+		});
+
+		var lazyImages = document.querySelectorAll('img.lazy, source.lazy');
+		
+		lazyImages.forEach(function(img) {
+			observer.observe(img);
+		});
+
+		function lazyLoad(elements) {
+			elements.forEach(function(image) {
+				if (image.isIntersecting) {
+					if (image.tagName === 'IMG') {
+						image.target.src = image.target.dataset.src;
+						image.target.removeAttribute('data-src');
+					}	else if (image.tagName === 'SOURCE') {
+						image.target.src = image.target.dataset.srcset;						
+						image.target.removeAttribute('data-srcset');
+					}
+					observer.unobserve(image.target);
+				};
+			});
+		};
+	} else {
+		console.log(3);
+		
+		var lazyImages = document.querySelectorAll('img.lazy, source.lazy');
+		var img_array = Array.prototype.slice.call(lazyImages)
+		
+		img_array.forEach(function(image) {
+			if (image.tagName === 'IMG') {
+				image.src = image.dataset.src;
+			}	else if (image.tagName === 'SOURCE') {
+				image.srcset = image.dataset.srcset;
+			}
+		})
+	}
+
+
 $(document).ready(function(){
 	
 	// Модальные окна
