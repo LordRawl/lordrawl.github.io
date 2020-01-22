@@ -2,7 +2,6 @@
 
 	if ("loading" in HTMLImageElement.prototype) {
 		var lazyImages = document.querySelectorAll("img.lazy, source.lazy");
-		console.log(1);
 		
 		lazyImages.forEach(function(img) {
 			if (img.tagName === 'IMG') {
@@ -14,7 +13,6 @@
 			}
 		});
 	} else if ('IntersectionObserver' in window) {
-		console.log(2);
 		
 		var observer = new IntersectionObserver(lazyLoad, {
 			rootMargin: "200px",
@@ -41,9 +39,7 @@
 				};
 			});
 		};
-	} else {
-		console.log(3);
-		
+	} else {		
 		var lazyImages = document.querySelectorAll('img.lazy, source.lazy');
 		var img_array = Array.prototype.slice.call(lazyImages)
 		
