@@ -1,0 +1,3161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://questquest.net">
+		<meta property="og:title" content="Каталог Квестов и развлечений в Москве - QuestQuest">
+		<meta property="og:description" content="Помогаем найти квесты и развлечения в Москве. Отзывы от игроков, обзоры, цены и адрес. Забронировать квесты в Москве по 📱 +7 (499) 322-29-40.">
+		<meta property="og:image" content="/assets/images/preview.jpg">
+		<meta name="description" content="Помогаем найти квесты и развлечения в Москве. Отзывы от игроков, обзоры, цены и адрес. Забронировать квесты в Москве по 📱 +7 (499) 322-29-40.">
+		<meta name="keywords" content="">
+		<link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="assets/images/favicon/apple-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+		<title>QuestQuest | UI-кит</title>
+		<!--[if lt IE 10]><p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер.Пожалуйста,  <a href="http://browsehappy.com/">обновите его до последней версии</a>, чтобы эта страница отображалась корректно.</p>
+<![endif]-->
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<script>
+				if (window.NodeList && !NodeList.prototype.forEach)
+				{
+					NodeList.prototype.forEach = function(callback, thisArg)
+					{
+						thisArg = thisArg || window;
+						for (var i = 0; i < this.length; i++)
+						{
+							callback.call(thisArg, this[i], i, this);
+						}
+					};
+				}
+				window.addEventListener('load', function()
+				{
+					var section = document.querySelectorAll('.ui-kit__section'),
+						navList = document.querySelector('.ui-kit__navigation__list');
+
+					section.forEach(function(item, index)
+					{
+						var id = 'section' + index;
+						var name = item.querySelector('.ui-kit__section-head h2').innerText;
+						var li = document.createElement('li');
+						var a = document.createElement('a');
+
+						a.setAttribute('href', '#' + id);
+						a.innerText = name;
+						a.classList.add('js-anchor');
+						li.appendChild(a);
+
+						navList.appendChild(li);
+						item.setAttribute('id', id);
+					});
+				});
+
+			</script>
+			<div class="ui-kit">
+				<div class="ui-kit__navigation">
+					<ul class="ui-kit__navigation__list"></ul>
+				</div>
+				<section class="ui-kit__head">
+					<div class="container">
+						<div class="ui-kit__name">QuestQuest</div>
+					</div>
+				</section>
+				<section class="ui-kit__section ui-kit__section_grid">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Сетка</h2>
+							<div class="ui-kit__description">
+								<p>Колонок: 12 ($grid-cols)</p>
+								<p>Переменные: styles/helpers/_variables.scss</p>
+								<p>Блок: blocks/grid/</p>
+								<div class="ui-kit__special">
+									<p>Возможные варианты использования</p>
+									<p>
+										<pre>+col(12) аналогично +col({ xl: 12 })</pre>
+									</p>
+									<p>
+										<pre>+col({ xl: 8, lg: 6: md: 5, sm: 7, xs: 12 })</pre>
+									</p>
+									<p>Промежуточные брейкпоинты указывать не обязательно</p>
+									<p>При следующей записи - блок будет занимать 6 колонок на всех разрешениях, а на самом маленьком (xs) — 12</p>
+									<p>
+										<pre>+col({ xl: 6, xs: 12 })</pre>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="grid">
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_1"></li>
+								<li class="grid__col grid__col_xl_4"></li>
+								<li class="grid__col grid__col_xl_4"></li>
+								<li class="grid__col grid__col_xl_4"></li>
+								<li class="grid__col grid__col_xl_6"></li>
+								<li class="grid__col grid__col_xl_6 grid__col_sm_6"></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Шрифты</h2>
+							<div class="ui-kit__blockpath">
+								<p>Переменные находятся в файле styles/helpers/_variables.scss</p>
+								<p>Шрифты подключены в styles/helpers/_fonts.scss</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Основной шрифт: MuseoSansCyrl ($font-main), font-weight: 300, 500, 700, 900</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Цвета сайта</h2>
+							<div class="ui-kit__blockpath">Переменные находятся в файле styles/helpers/_variables.scss</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="ui-kit__elements-list">
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+								<div class="ui-kit__color ui-kit__color_color"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Табы</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/tabs/tabs</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="tabs">
+								<li class="tabs__item -active-" data-tab-target="tab1">Информация</li>
+								<li class="tabs__item" data-tab-target="tab2">Контент</li>
+								<li class="tabs__item" data-tab-target="tab3">Тексты</li>
+							</ul>
+							<ul class="tabs-content">
+								<li class="tabs-content__wrapper -active-" data-tab-group="testtabs1" data-tab="tab1">
+									<p>Это таб 1</p>
+								</li>
+								<li class="tabs-content__wrapper" data-tab-group="testtabs1" data-tab="tab2">
+									<p>Это таб 2</p>
+								</li>
+								<li class="tabs-content__wrapper" data-tab-group="testtabs1" data-tab="tab3">
+									<p>Это таб 3</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Табы кнопочные</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/tabs-button/tabs-button</p>
+							</div>
+							<div class="ui-kit__description"></div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="tabs-button">
+								<div class="swiper-container tabs-button__container">
+									<ul class="tabs-button__wrapper swiper-wrapper">
+										<li class="tabs-button__item swiper-slide -active-" data-tab-target="tab-button1">Информация</li>
+										<li class="tabs-button__item swiper-slide" data-tab-target="tab-button2">Контент</li>
+										<li class="tabs-button__item swiper-slide" data-tab-target="tab-button3">Тексты</li>
+									</ul>
+								</div>
+							</div>
+							<ul class="tabs-content">
+								<li class="tabs-content__wrapper -active-" data-tab-group="testtabs2" data-tab="tab-button1">
+									<p>Это таб 1</p>
+								</li>
+								<li class="tabs-content__wrapper" data-tab-group="testtabs2" data-tab="tab-button2">
+									<p>Это таб 2</p>
+								</li>
+								<li class="tabs-content__wrapper" data-tab-group="testtabs2" data-tab="tab-button3">
+									<p>Это таб 3</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Ссылки</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/link/link</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="ui-kit__elements-list">
+								<a class="link" href="#">
+									<span class="link__text">Обычная ссылка</span>
+								</a>
+								<a class="link link_dashed" href="#">
+									<span class="link__text">Пунктирная ссылка</span>
+								</a>
+								<a class="link" href="#">
+									<span class="link__text">Ссылка с иконкой</span>
+									<svg class="link__icon">
+										<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+									</svg>
+								</a>
+								<a class="link is-disabled" href="#">
+									<span class="link__text">Отключенная ссылка</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Хлебные крошки</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/breadcrumbs/breadcrumbs</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs__item">
+									<a class="breadcrumbs__link" href="#" title="Переход на Главная">Главная</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a class="breadcrumbs__link" href="#" title="Переход на Раздел">Раздел</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a class="breadcrumbs__link" href="#" title="Переход на Страница">Страница</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Кнопки</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/button/button</p>
+							</div>
+							<div class="ui-kit__description">
+								<div class="ui-kit__special">
+									<p>Модификаторы: </p>
+									<ul>
+										<li>.button--default - Основной цвет кнопки</li>
+										<li>.button--primary - Синий цвет кнопки</li>
+										<li>.button--success - Зеленая цвет кнопки</li>
+										<li>.button--nobg - Кнопка без фона</li>
+										<li>.button--max - Ширина кнопки 100%</li>
+										<li>.button--reverse - Иконка отражена по горизонтали</li>
+										<li>.button--m - Средняя кнопка</li>
+										<li>.button--s - Маленькая кнопка</li>
+										<li>.button--icon - Пустая обертка для иконок</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="ui-kit__elements-list">
+								<button class="button button--default button--m">
+									<div class="button__block">
+										<span class="button__text">Кнопка</span>
+										<svg class="button__icon">
+											<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+										</svg>
+									</div>
+								</button>
+								<button class="button button--primary button--m">
+									<div class="button__block">
+										<span class="button__text">Кнопка</span>
+										<svg class="button__icon">
+											<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+										</svg>
+									</div>
+								</button>
+								<a class="button button--default button--m" href="#">
+									<span class="button__block">
+										<span class="button__text">Ссылка</span>
+										<svg class="button__icon">
+											<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+										</svg>
+									</span>
+								</a>
+								<button class="button button--success button--m">
+									<div class="button__block">
+										<span class="button__text">Кнопка</span>
+										<svg class="button__icon">
+											<use xlink:href="assets/images/icon.svg#icon_heart"></use>
+										</svg>
+									</div>
+								</button>
+								<button class="button button--nobg button--m">
+									<div class="button__block">
+										<span class="button__text">Кнопка</span>
+									</div>
+								</button>
+								<button class="button button--default button--reverse button--m">
+									<div class="button__block">
+										<span class="button__text">Кнопка</span>
+										<svg class="button__icon">
+											<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+										</svg>
+									</div>
+								</button>
+								<button class="button button--default button--s">
+									<div class="button__block">
+										<span class="button__text">Маленькая кнопка</span>
+										<svg class="button__icon">
+											<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+										</svg>
+									</div>
+								</button>
+								<button class="button button--default button--m" disabled="disabled">
+									<div class="button__block">
+										<span class="button__text">Отключенная кнопка</span>
+									</div>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Dropdown</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/dropdown/dropdown</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Для использования, нужно "кнопке" добавить класс .js-dropdown-toggle</p>
+								<p>"Кнопка" должна стоять ПЕРЕД дропдауном</p>
+								<p>Чтобы дропдаун падал вниз, ставим атрибут data-direction="down", чтобы вверх data-direction="up"</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="ui-kit__elements-list">
+								<div style="display: inline-block; position: relative;">
+									<button class="button button--default button--m js-dropdown-toggle">
+										<div class="button__block">
+											<span class="button__text">top</span>
+										</div>
+									</button>
+									<div class="dropdown js-dropdown" data-direction="up">
+										<div class="dropdown__field">
+											<div style="padding: 20px;font-size:14px">content content content content</div>
+										</div>
+									</div>
+								</div>
+								<div style="display: inline-block; position: relative;">
+									<button class="button button--default button--m js-dropdown-toggle">
+										<div class="button__block">
+											<span class="button__text">bottom</span>
+										</div>
+									</button>
+									<div class="dropdown js-dropdown" data-direction="down">
+										<div class="dropdown__field">
+											<div style="padding: 20px;font-size:14px">content content content content</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Селект</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/select/select</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Стрелка задается модификатором .select__text_arrow, треугольник - .select__text_triangle к классу .select__text</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="ui-kit__elements-list">
+								<div class="select">
+									<div class="select__block js-select-toggle">
+										<span class="select__text select__text_arrow js-select-text">месяц</span>
+									</div>
+									<div class="select__dropdown dropdown js-select">
+										<div class="select__field">
+											<ul class="select__list">
+												<li class="select__item">октябрь</li>
+												<li class="select__item">ноябрь</li>
+												<li class="select__item">декабрь</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="select">
+									<div class="select__block js-select-toggle">
+										<span class="select__text select__text_triangle js-select-text">год</span>
+									</div>
+									<div class="select__dropdown dropdown js-select">
+										<div class="select__field">
+											<ul class="select__list">
+												<li class="select__item">2019</li>
+												<li class="select__item">2020</li>
+												<li class="select__item">2021</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Social</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/social/social</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Описание Блока</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="social">
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="ВКонтакте" target="_blank" title="Перейти в ВКонтакте">
+										<svg class="social__icon">
+											<use xlink:href="assets/images/icon.svg#icon_vk"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="Facebook" target="_blank" title="Перейти в Facebook">
+										<svg class="social__icon">
+											<use xlink:href="assets/images/icon.svg#icon_fb"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="Instagram" target="_blank" title="Перейти в Instagram">
+										<svg class="social__icon">
+											<use xlink:href="assets/images/icon.svg#icon_inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="YouTube" target="_blank" title="Перейти в YouTube">
+										<svg class="social__icon">
+											<use xlink:href="assets/images/icon.svg#icon_yt"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="Tripadvisor" target="_blank" title="Перейти в Tripadvisor">
+										<svg class="social__icon">
+											<use xlink:href="assets/images/icon.svg#icon_ta"></use>
+										</svg>
+									</a>
+								</li>
+							</ul><br />
+							<ul class="social">
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="ВКонтакте" target="_blank" title="Перейти в ВКонтакте">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_vk"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="Facebook" target="_blank" title="Перейти в Facebook">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_fb"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="Instagram" target="_blank" title="Перейти в Instagram">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="YouTube" target="_blank" title="Перейти в YouTube">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_yt"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link" href="#" aria-label="Tripadvisor" target="_blank" title="Перейти в Tripadvisor">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_ta"></use>
+										</svg>
+									</a>
+								</li>
+							</ul><br />
+							<ul class="social social_m_max">
+								<li class="social__item">
+									<a class="social__link social__link_vk" href="#" aria-label="ВКонтакте" target="_blank" title="Перейти в ВКонтакте">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_vk"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link social__link_fb" href="#" aria-label="Facebook" target="_blank" title="Перейти в Facebook">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_fb"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link social__link_inst" href="#" aria-label="Instagram" target="_blank" title="Перейти в Instagram">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link social__link_yt" href="#" aria-label="YouTube" target="_blank" title="Перейти в YouTube">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_yt"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="social__item">
+									<a class="social__link social__link_ta" href="#" aria-label="Tripadvisor" target="_blank" title="Перейти в Tripadvisor">
+										<svg class="social__icon social__icon_f_l">
+											<use xlink:href="assets/images/icon.svg#icon_ta"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Логотип</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/logo/logo</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<svg class="logo">
+								<use xlink:href="assets/images/icon.svg#icon_logo"></use>
+							</svg>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Карточка квеста</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/card/card</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Описание Блока</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="grid">
+								<li class="grid__col grid__col_xl_3 grid__col_lg_4 grid__col_md_6 grid__col_sm_12">
+									<a class="card" href="./quest.html">
+										<div class="card__header">
+											<picture class="card__bg">
+												<source type="image/webp" srcset="assets/images/cards/1.webp" />
+												<img src="assets/images/cards/1.jpg" alt="Обложка квеста" />
+											</picture>
+											<div class="card__header-top">
+												<div class="card__price">от 625 &#8381;/чел</div>
+											</div>
+											<div class="card__header-bottom">
+												<p class="card__tag">Перформанс</p>
+											</div>
+										</div>
+										<div class="card__content">
+											<div class="card__body">
+												<p class="card__title">Экшн-Квест Миссия Спецагентов</p>
+												<div class="card__rating">
+													<ul class="rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -semi-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="card__rating-text">14</p>
+												</div>
+												<ul class="chars card__chars">
+													<li class="chars__item icon-block">
+														<svg class="chars__icon">
+															<use xlink:href="assets/images/icon.svg#icon_user"></use>
+														</svg>
+														<p class="chars__text">2 - 6 игроков</p>
+													</li>
+													<li class="chars__item icon-block">
+														<svg class="chars__icon">
+															<use xlink:href="assets/images/icon.svg#icon_blood"></use>
+														</svg>
+														<p class="chars__text">Кровь</p>
+													</li>
+													<li class="chars__item icon-block">
+														<svg class="chars__icon">
+															<use xlink:href="assets/images/icon.svg#icon_mask"></use>
+														</svg>
+														<p class="chars__text">Актёр</p>
+													</li>
+													<li class="chars__item icon-block">
+														<svg class="chars__icon">
+															<use xlink:href="assets/images/icon.svg#icon_time"></use>
+														</svg>
+														<p class="chars__text">100 минут</p>
+													</li>
+												</ul>
+											</div>
+											<div class="card__bottom">
+												<div class="icon-block">
+													<svg class="card__icon">
+														<use xlink:href="assets/images/icon.svg#icon_train"></use>
+													</svg>
+													<p class="card__address">м. Проспект мира</p>
+												</div>
+												<p class="card__age">14+</p>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Карточка блога</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/card-blog/card-blog</p>
+							</div>
+							<div class="ui-kit__description"></div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="grid">
+								<li class="grid__col grid__col_xl_3">
+									<div class="card-blog">
+										<div class="card-blog__header">
+											<picture class="card-blog__bg">
+												<source type="image/webp" srcset="assets/images/card-blog/1.webp" />
+												<img src="assets/images/card-blog/1.jpg" alt="Обложка статьи" />
+											</picture>
+										</div>
+										<div class="card-blog__content">
+											<div class="card-blog__body">
+												<p class="card-blog__title">Квест на детский день рождения</p>
+											</div>
+											<div class="card-blog__bottom">
+												<p class="card-blog__text">13.08.19</p>
+												<p class="card-blog__text">Время прочтения - 13 минут</p>
+												<a class="button button--s button--default card-blog__button" href="./blog.html">
+													<span class="button__block">
+														<span class="button__text">Читать далее</span>
+													</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Карточка продукта</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/card-product/card-product</p>
+							</div>
+							<div class="ui-kit__description"></div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="grid">
+								<li class="grid__col grid__col_xl_3 grid__col_lg_4 grid__col_md_6 grid__col_sm_12">
+									<a class="card" href="">
+										<div class="card__header">
+											<picture class="card__bg">
+												<source type="image/webp" srcset="assets/images/product/1.webp" />
+												<img src="assets/images/product/1.jpg" alt="Фотография товара" />
+											</picture>
+											<div class="card__header-top">
+												<div class="card__price">от 625 &#8381;</div>
+											</div>
+										</div>
+										<div class="card__content">
+											<div class="card__body">
+												<div class="card__body-top">
+													<p class="card__title">Квест Лётная школа</p>
+													<p class="card__age card__age_top">14+</p>
+												</div>
+												<div class="card__rating">
+													<ul class="rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -semi-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="card__rating-text">14</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Неизменяемый рейтинг</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/rating/rating</p>
+							</div>
+							<div class="ui-kit__description"></div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="rating">
+								<li class="rating__item">
+									<svg class="rating__star star" viewBox="0 0 12 11.92">
+										<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+										<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+									</svg>
+								</li>
+								<li class="rating__item">
+									<svg class="rating__star star" viewBox="0 0 12 11.92">
+										<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+										<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+									</svg>
+								</li>
+								<li class="rating__item">
+									<svg class="rating__star star" viewBox="0 0 12 11.92">
+										<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+										<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+									</svg>
+								</li>
+								<li class="rating__item">
+									<svg class="rating__star star" viewBox="0 0 12 11.92">
+										<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+										<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+									</svg>
+								</li>
+								<li class="rating__item">
+									<svg class="rating__star star" viewBox="0 0 12 11.92">
+										<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+										<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+									</svg>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Изменяемый рейтинг</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/choose-rating/choose-rating</p>
+							</div>
+							<div class="ui-kit__description"></div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<ul class="choose-rating">
+								<li class="choose-rating__item">
+									<label class="choose-rating__wrapper">
+										<input class="choose-rating__radio" name="review-rating" value="5" type="text" />
+										<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+											<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										</svg>
+									</label>
+								</li>
+								<li class="choose-rating__item">
+									<label class="choose-rating__wrapper">
+										<input class="choose-rating__radio" name="review-rating" value="4" type="text" />
+										<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+											<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										</svg>
+									</label>
+								</li>
+								<li class="choose-rating__item">
+									<label class="choose-rating__wrapper">
+										<input class="choose-rating__radio" name="review-rating" value="3" type="text" />
+										<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+											<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										</svg>
+									</label>
+								</li>
+								<li class="choose-rating__item">
+									<label class="choose-rating__wrapper">
+										<input class="choose-rating__radio" name="review-rating" value="2" type="text" />
+										<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+											<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										</svg>
+									</label>
+								</li>
+								<li class="choose-rating__item">
+									<label class="choose-rating__wrapper">
+										<input class="choose-rating__radio" name="review-rating" value="1" type="text" />
+										<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+											<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+										</svg>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Поиск</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/search/search</p>
+							</div>
+							<div class="ui-kit__description"></div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="search js-search">
+								<div class="search__block">
+									<button class="button--icon" type="button" aria-label="Искать">
+										<svg class="search__icon search__icon_s_x">
+											<use xlink:href="assets/images/icon.svg#icon_search"></use>
+										</svg>
+									</button>
+									<label class="visually-hidden" for="main-search-input">Поиск</label>
+									<input class="search__input js-search-input" placeholder="Что ищете?" id="main-search-input" type="text" />
+									<div class="search__hidden">
+										<button class="button--icon" type="button" aria-label="Искать">
+											<svg class="search__icon search__icon_s_s search__close js-search-clear">
+												<use xlink:href="assets/images/icon.svg#icon_close"></use>
+											</svg>
+										</button>
+										<p class="search__text">Найдено: <span class="search__counter">12</span>
+										</p>
+									</div>
+								</div>
+								<div class="search__field js-search-field">
+									<ul class="search__field-list">
+										<li class="search__field-item">
+											<a class="search__field-link" href="#">
+												<svg class="search__icon search__icon_s_m">
+													<use xlink:href="assets/images/icon.svg#icon_search"></use>
+												</svg>
+												<span class="search__descr">Квест Логово Маньяка</span>
+											</a>
+										</li>
+										<li class="search__field-item">
+											<a class="search__field-link" href="#">
+												<svg class="search__icon search__icon_s_m">
+													<use xlink:href="assets/images/icon.svg#icon_search"></use>
+												</svg>
+												<span class="search__descr">Квест Логово Маньяка</span>
+											</a>
+										</li>
+										<li class="search__field-item">
+											<a class="search__field-link" href="#">
+												<svg class="search__icon search__icon_s_m">
+													<use xlink:href="assets/images/icon.svg#icon_search"></use>
+												</svg>
+												<span class="search__descr">Квест Логово Маньяка</span>
+											</a>
+										</li>
+										<li class="search__field-item">
+											<a class="search__field-link" href="#">
+												<svg class="search__icon search__icon_s_m">
+													<use xlink:href="assets/images/icon.svg#icon_search"></use>
+												</svg>
+												<span class="search__descr">Квест Логово Маньяка</span>
+											</a>
+										</li>
+										<li class="search__field-item">
+											<a class="search__field-link" href="#">
+												<svg class="search__icon search__icon_s_m">
+													<use xlink:href="assets/images/icon.svg#icon_search"></use>
+												</svg>
+												<span class="search__descr">Квест Логово Маньяка</span>
+											</a>
+										</li>
+										<li class="search__field-item">
+											<a class="search__field-link" href="#">
+												<svg class="search__icon search__icon_s_m">
+													<use xlink:href="assets/images/icon.svg#icon_search"></use>
+												</svg>
+												<span class="search__descr">Квест Логово Маньяка</span>
+											</a>
+										</li>
+										<li class="search__field-item">
+											<a class="search__field-link" href="#">
+												<svg class="search__icon search__icon_s_m">
+													<use xlink:href="assets/images/icon.svg#icon_search"></use>
+												</svg>
+												<span class="search__descr">Квест Логово Маньяка</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Кнопки формы</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/form-buttons/form-buttons</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>В этом блоке собраны чекбокс, радио и переключатель </p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="ui-kit__elements-list">
+								<label class="form-button checkbox">
+									<input class="form-button__input" type="checkbox" />
+									<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+										<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+										<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+									</svg>
+									<span class="form-button__text">Чекбокс</span>
+								</label>
+								<label class="form-button radio">
+									<input class="form-button__input" type="radio" />
+									<span class="form-button__icon radio__icon"></span>
+									<span class="form-button__text">Радио</span>
+								</label>
+								<div class="form-counter">
+									<button class="form-counter__button form-counter__button_minus" type="button"></button>
+									<input class="form-counter__input js-input-number" type="text" value="4" data-min="2" data-max="12" />
+									<button class="form-counter__button form-counter__button_plus" type="button"></button>
+								</div>
+								<div class="form-counter">
+									<button class="form-counter__button form-counter__button_minus" type="button"></button>
+									<input class="form-counter__input js-input-number" type="text" value="4" data-min="2" data-max="12" />
+									<button class="form-counter__button form-counter__button_plus" type="button"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Отзыв</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/review/review</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="review">
+								<div class="review__content">
+									<ul class="rating review__rating">
+										<li class="rating__item">
+											<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+												<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+												<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+												<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+											</svg>
+										</li>
+										<li class="rating__item">
+											<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+												<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+												<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+												<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+											</svg>
+										</li>
+										<li class="rating__item">
+											<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+												<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+												<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+												<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+											</svg>
+										</li>
+										<li class="rating__item">
+											<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+												<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+												<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+												<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+											</svg>
+										</li>
+										<li class="rating__item">
+											<svg class="rating__star star -semi-" viewBox="0 0 12 11.92">
+												<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+												<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+												<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+											</svg>
+										</li>
+									</ul>
+									<p class="review__text">Отличный квест. Большое спасибо</p>
+									<div class="review__bottom">
+										<div class="review__bottom-block">
+											<svg class="review__icon">
+												<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+											</svg>
+											<p class="review__descr">02.05.19</p>
+											<p class="review__descr">14:00</p>
+										</div>
+										<p class="review__descr js-review-phone">+79645653707</p>
+									</div>
+								</div>
+								<p class="review__name">Мария</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Всплывающие окна</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/modal/modal</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Кнопка, открывающая модалку должна иметь атрибут data-modal-target, в котором указываем какую конкретно модалку открываем. </p>
+								<p>Все модальные окна находятся в самом низу страницы, под футером. </p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="ui-kit__elements-list">
+								<button class="button button--m button--primary" data-modal-target="registration">
+									<div class="button__block">
+										<span class="button__text">Зарегистрироваться</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="login">
+									<div class="button__block">
+										<span class="button__text">Войти</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="resetpassword">
+									<div class="button__block">
+										<span class="button__text">Восстановить пароль</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="city">
+									<div class="button__block">
+										<span class="button__text">Выбрать город</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="buycard">
+									<div class="button__block">
+										<span class="button__text">Купить карту</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="reserve">
+									<div class="button__block">
+										<span class="button__text">Забронировать квест</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="reserve-pay">
+									<div class="button__block">
+										<span class="button__text">Предоплата за квест</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="review">
+									<div class="button__block">
+										<span class="button__text">Написать отзыв</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="docs">
+									<div class="button__block">
+										<span class="button__text">Получить материалы</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="faq">
+									<div class="button__block">
+										<span class="button__text">FAQ</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="out">
+									<div class="button__block">
+										<span class="button__text">Выйти</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="coupon">
+									<div class="button__block">
+										<span class="button__text">Активировать купон</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="history">
+									<div class="button__block">
+										<span class="button__text">История операций</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="call-me">
+									<div class="button__block">
+										<span class="button__text">Обратный звонок</span>
+									</div>
+								</button>
+								<button class="button button--m button--primary" data-modal-target="get-game">
+									<div class="button__block">
+										<span class="button__text">Получить игру</span>
+									</div>
+								</button>
+							</div>
+							<div class="modal">
+								<div class="modal__container modal__container--m" data-modal="registration">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">Регистрация</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input form__input_icon js-input-psw" type="password" placeholder="Введите пароль" id="" />
+												<svg class="form__icon js-icon-psw" viewbox="0 0 17 12.87">
+													<path d="M14.46,4.43a8,8,0,0,0-1.25-.88,8.72,8.72,0,0,0-2-.84A9.41,9.41,0,0,0,2.6,4.43L0,6.64,2.54,8.8a7.79,7.79,0,0,0,.71.54,11.39,11.39,0,0,0,2.38,1.13,9.68,9.68,0,0,0,2.82.42,9.24,9.24,0,0,0,6-2.09L17,6.59Zm-.47,4A8.87,8.87,0,0,1,5.83,10,9.45,9.45,0,0,1,3.61,9c-.23-.16-.46-.33-.67-.5L.81,6.64,3,4.78a8.75,8.75,0,0,1,8-1.6A6.77,6.77,0,0,1,12.88,4a8.08,8.08,0,0,1,1.18.83l2.13,1.81Z"></path>
+													<path d="M8.79,3.8a3.14,3.14,0,0,1,3.39,2.81A3.14,3.14,0,0,1,8.79,9.42,3.14,3.14,0,0,1,5.4,6.61,3.14,3.14,0,0,1,8.79,3.8m0-.5A3.63,3.63,0,0,0,4.9,6.61,3.63,3.63,0,0,0,8.79,9.92a3.63,3.63,0,0,0,3.89-3.31A3.63,3.63,0,0,0,8.79,3.3Z"></path>
+													<path class="form__icon-line" d="M2.13,12.62a.53.53,0,0,1-.36-.13.47.47,0,0,1,0-.72L15.16.38a.55.55,0,0,1,.36-.13.59.59,0,0,1,.37.13.48.48,0,0,1,.17.37.48.48,0,0,1-.17.36L2.5,12.49A.54.54,0,0,1,2.13,12.62Z"></path>
+												</svg>
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip">Пароль должен содержать не менее 8 символов и состоять из латинских букв и цифр</p>
+											</div>
+											<div class="form__block form__block_code">
+												<div class="form__block-inner">
+													<label class="visually-hidden" for="reg-code-input"></label>
+													<input class="form__input form__input_min js-input-code" type="text" placeholder="Код" id="reg-code-input" />
+													<div class="form__subblock">
+														<button class="form__text" type="button" data-modal-target="resetpassword2">Отправить ещё раз</button>
+														<span class="form__timer"> </span>
+													</div>
+												</div>
+											</div>
+											<button class="button button--m button--default button--max form__button js-reg" type="submit">
+												<div class="button__block">
+													<span class="button__text">Зарегистироваться</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+											<button class="form__text modal__subbutton" type="button" data-modal-target="login">У меня уже есть аккаунт</button>
+											<label class="form-button checkbox form__label">
+												<input class="form-button__input" type="checkbox" />
+												<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+													<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+													<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+												</svg>
+												<span class="form-button__text">Я согласен получать новости и рекламные рассылки</span>
+											</label>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="login">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">Вход на сайт</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<label class="visually-hidden" for="login-phone-input"></label>
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="login-phone-input" />
+											</div>
+											<div class="form__block">
+												<label class="visually-hidden" for="login-psw-input"></label>
+												<input class="form__input form__input_icon js-input-psw" type="password" placeholder="Введите пароль" id="login-psw-input" />
+												<svg class="form__icon js-icon-psw" viewbox="0 0 17 12.87">
+													<path d="M14.46,4.43a8,8,0,0,0-1.25-.88,8.72,8.72,0,0,0-2-.84A9.41,9.41,0,0,0,2.6,4.43L0,6.64,2.54,8.8a7.79,7.79,0,0,0,.71.54,11.39,11.39,0,0,0,2.38,1.13,9.68,9.68,0,0,0,2.82.42,9.24,9.24,0,0,0,6-2.09L17,6.59Zm-.47,4A8.87,8.87,0,0,1,5.83,10,9.45,9.45,0,0,1,3.61,9c-.23-.16-.46-.33-.67-.5L.81,6.64,3,4.78a8.75,8.75,0,0,1,8-1.6A6.77,6.77,0,0,1,12.88,4a8.08,8.08,0,0,1,1.18.83l2.13,1.81Z"></path>
+													<path d="M8.79,3.8a3.14,3.14,0,0,1,3.39,2.81A3.14,3.14,0,0,1,8.79,9.42,3.14,3.14,0,0,1,5.4,6.61,3.14,3.14,0,0,1,8.79,3.8m0-.5A3.63,3.63,0,0,0,4.9,6.61,3.63,3.63,0,0,0,8.79,9.92a3.63,3.63,0,0,0,3.89-3.31A3.63,3.63,0,0,0,8.79,3.3Z"></path>
+													<path class="form__icon-line" d="M2.13,12.62a.53.53,0,0,1-.36-.13.47.47,0,0,1,0-.72L15.16.38a.55.55,0,0,1,.36-.13.59.59,0,0,1,.37.13.48.48,0,0,1,.17.37.48.48,0,0,1-.17.36L2.5,12.49A.54.54,0,0,1,2.13,12.62Z"></path>
+												</svg>
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip"></p>
+												<button class="form__tooltip" type="button" data-modal-target="resetpassword">Забыли пароль?</button>
+											</div>
+											<button class="button button--m button--default button--max form__button" type="submit">
+												<div class="button__block">
+													<span class="button__text">Войти</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+											<button class="form__text modal__subbutton" type="button" data-modal-target="registration">Зарегистироваться</button>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="resetpassword">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">Восстановление пароля</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<label class="visually-hidden" for="res-phone-input"></label>
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="res-phone-input" />
+											</div>
+											<div class="form__block form__block_code">
+												<div class="form__block-inner">
+													<label class="visually-hidden" for="res-code-input"></label>
+													<input class="form__input form__input_min js-input-code" type="text" placeholder="Код" id="res-code-input" />
+													<div class="form__subblock">
+														<button class="form__text" type="button" data-modal-target="resetpassword2">Отправить ещё раз</button>
+														<span class="form__timer"> </span>
+													</div>
+												</div>
+											</div>
+											<button class="button button--m button--default button--max form__button js-reg" type="submit">
+												<div class="button__block">
+													<span class="button__text">Получить код</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="resetpassword2">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">Восстановление пароля</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<label class="visually-hidden" for="res-psw-input"></label>
+												<input class="form__input form__input_icon js-input-psw" type="password" placeholder="Введите пароль" id="res-psw-input" />
+												<svg class="form__icon js-icon-psw" viewbox="0 0 17 12.87">
+													<path d="M14.46,4.43a8,8,0,0,0-1.25-.88,8.72,8.72,0,0,0-2-.84A9.41,9.41,0,0,0,2.6,4.43L0,6.64,2.54,8.8a7.79,7.79,0,0,0,.71.54,11.39,11.39,0,0,0,2.38,1.13,9.68,9.68,0,0,0,2.82.42,9.24,9.24,0,0,0,6-2.09L17,6.59Zm-.47,4A8.87,8.87,0,0,1,5.83,10,9.45,9.45,0,0,1,3.61,9c-.23-.16-.46-.33-.67-.5L.81,6.64,3,4.78a8.75,8.75,0,0,1,8-1.6A6.77,6.77,0,0,1,12.88,4a8.08,8.08,0,0,1,1.18.83l2.13,1.81Z"></path>
+													<path d="M8.79,3.8a3.14,3.14,0,0,1,3.39,2.81A3.14,3.14,0,0,1,8.79,9.42,3.14,3.14,0,0,1,5.4,6.61,3.14,3.14,0,0,1,8.79,3.8m0-.5A3.63,3.63,0,0,0,4.9,6.61,3.63,3.63,0,0,0,8.79,9.92a3.63,3.63,0,0,0,3.89-3.31A3.63,3.63,0,0,0,8.79,3.3Z"></path>
+													<path class="form__icon-line" d="M2.13,12.62a.53.53,0,0,1-.36-.13.47.47,0,0,1,0-.72L15.16.38a.55.55,0,0,1,.36-.13.59.59,0,0,1,.37.13.48.48,0,0,1,.17.37.48.48,0,0,1-.17.36L2.5,12.49A.54.54,0,0,1,2.13,12.62Z"></path>
+												</svg>
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip">Пароль должен содержать не менее 8 символов и состоять из латинских букв и цифр</p>
+											</div>
+											<button class="button button--m button--default button--max form__button" type="submit" data-modal-target="resetpassword3">
+												<div class="button__block">
+													<span class="button__text">Сохранить</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="resetpassword3">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<svg class="modal__check" viewbox="0 0 20 20">
+											<path d="M1,11L6,16L18.5,3.5"></path>
+										</svg>
+										<p class="modal__title--s">Ваш пароль успешно изменён!</p>
+										<button class="button button--m button--default button--max modal__button" type="button" data-modal-target="login">
+											<div class="button__block">
+												<span class="button__text">Войти</span>
+												<svg class="button__icon">
+													<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+												</svg>
+											</div>
+										</button>
+									</div>
+								</div>
+								<div class="modal__container modal__container--x" data-modal="city">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--x">Выберите город</p>
+										<div class="search modal__search js-search">
+											<div class="search__block">
+												<button class="button--icon" type="button">
+													<svg class="search__icon search__icon_s_x">
+														<use xlink:href="assets/images/icon.svg#icon_search"></use>
+													</svg>
+												</button>
+												<input class="search__input js-search-input" placeholder="Что ищете?" type="text" />
+												<div class="search__hidden">
+													<button class="button--icon" type="button">
+														<svg class="search__icon search__icon_s_s search__close js-search-clear">
+															<use xlink:href="assets/images/icon.svg#icon_close"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+											<div class="search__field js-search-field">
+												<ul class="search__field-list">
+													<li class="search__field-item">
+														<a class="search__field-link" href="#">
+															<svg class="search__icon search__icon_s_x">
+																<use xlink:href="assets/images/icon.svg#icon_search"></use>
+															</svg>
+															<span class="search__descr">Квест Логово Маньяка</span>
+														</a>
+													</li>
+													<li class="search__field-item">
+														<a class="search__field-link" href="#">
+															<svg class="search__icon search__icon_s_x">
+																<use xlink:href="assets/images/icon.svg#icon_search"></use>
+															</svg>
+															<span class="search__descr">Квест Логово Маньяка</span>
+														</a>
+													</li>
+													<li class="search__field-item">
+														<a class="search__field-link" href="#">
+															<svg class="search__icon search__icon_s_x">
+																<use xlink:href="assets/images/icon.svg#icon_search"></use>
+															</svg>
+															<span class="search__descr">Квест Логово Маньяка</span>
+														</a>
+													</li>
+													<li class="search__field-item">
+														<a class="search__field-link" href="#">
+															<svg class="search__icon search__icon_s_x">
+																<use xlink:href="assets/images/icon.svg#icon_search"></use>
+															</svg>
+															<span class="search__descr">Квест Логово Маньяка</span>
+														</a>
+													</li>
+													<li class="search__field-item">
+														<a class="search__field-link" href="#">
+															<svg class="search__icon search__icon_s_x">
+																<use xlink:href="assets/images/icon.svg#icon_search"></use>
+															</svg>
+															<span class="search__descr">Квест Логово Маньяка</span>
+														</a>
+													</li>
+													<li class="search__field-item">
+														<a class="search__field-link" href="#">
+															<svg class="search__icon search__icon_s_x">
+																<use xlink:href="assets/images/icon.svg#icon_search"></use>
+															</svg>
+															<span class="search__descr">Квест Логово Маньяка</span>
+														</a>
+													</li>
+													<li class="search__field-item">
+														<a class="search__field-link" href="#">
+															<svg class="search__icon search__icon_s_x">
+																<use xlink:href="assets/images/icon.svg#icon_search"></use>
+															</svg>
+															<span class="search__descr">Квест Логово Маньяка</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="modal-city">
+											<ul class="modal-city__list">
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Москва</a>
+												</li>
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Санкт-Петербург</a>
+												</li>
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Барнаул</a>
+												</li>
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Владивосток</a>
+												</li>
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Волгоград</a>
+												</li>
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Воронеж</a>
+												</li>
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Екатеринбург</a>
+												</li>
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Иркутск</a>
+												</li>
+												<li class="modal-city__item">
+													<a class="modal-city__link" href="">Казань</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="buycard">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--s">Заказать карту </p>
+										<p class="modal__title--s">Карту номиналом 1000 ₽ </p>
+										<form class="form modal__form">
+											<ul class="form__img-list">
+												<li class="form__img-item">
+													<img class="form__img" src="assets/images/payment/visa-mc.svg" alt="" role="presentation" />
+												</li>
+												<li class="form__img-item">
+													<img class="form__img" src="assets/images/payment/webmoney.svg" alt="" role="presentation" />
+												</li>
+												<li class="form__img-item">
+													<img class="form__img" src="assets/images/payment/qiwi.svg" alt="" role="presentation" />
+												</li>
+												<li class="form__img-item">
+													<img class="form__img" src="assets/images/payment/yandex.svg" alt="" role="presentation" />
+												</li>
+											</ul>
+											<div class="form__block">
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input js-input-email" type="email" placeholder="Введите email" id="" />
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip form__tooltip_error">Введите телефон</p>
+											</div>
+											<div class="modal-total">
+												<span class="modal-total__title">Итоговая сумма: </span>
+												<span class="modal-total__sum">1000 ₽</span>
+												<span class="modal-total__descr"> (без учёта комиссии)</span>
+											</div>
+											<button class="button button--m button--default button--max form__button" type="submit">
+												<div class="button__block">
+													<span class="button__text">Оплатить</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+											<label class="form-button checkbox form__label">
+												<input class="form-button__input" type="checkbox" />
+												<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+													<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+													<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+												</svg>
+												<span class="form-button__text">Я соглашаюсь с <a class="form-button__link" href="#" target="_blank">правилами</a> и даю согласие на обработку персональных данных</span>
+											</label>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="buycard2">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--s">Заказать карту </p>
+										<p class="modal__title--s">с номиналом на выбор</p>
+										<form class="form modal__form">
+											<p class="form__descr">Выберите способ оплаты:</p>
+											<div class="form__radio-img">
+												<label class="form-button radio form__radio-block">
+													<input class="form-button__input" type="radio" name="payment" />
+													<span class="form-button__icon radio__icon"></span>
+													<div class="form-button__pict">
+														<img class="form-button__img" src="assets/images/payment/visa-mc.svg" alt="" role="presentation" />
+													</div>
+												</label>
+												<label class="form-button radio form__radio-block">
+													<input class="form-button__input" type="radio" name="payment" />
+													<span class="form-button__icon radio__icon"></span>
+													<div class="form-button__pict">
+														<img class="form-button__img" src="assets/images/payment/webmoney.svg" alt="" role="presentation" />
+													</div>
+												</label>
+												<label class="form-button radio form__radio-block">
+													<input class="form-button__input" type="radio" name="payment" />
+													<span class="form-button__icon radio__icon"></span>
+													<div class="form-button__pict">
+														<img class="form-button__img" src="assets/images/payment/qiwi.svg" alt="" role="presentation" />
+													</div>
+												</label>
+												<label class="form-button radio form__radio-block">
+													<input class="form-button__input" type="radio" name="payment" />
+													<span class="form-button__icon radio__icon"></span>
+													<div class="form-button__pict">
+														<img class="form-button__img" src="assets/images/payment/yandex.svg" alt="" role="presentation" />
+													</div>
+												</label>
+											</div>
+											<div class="form__block">
+												<input class="form__input js-input-number" type="text" placeholder="Введите сумму (не менее 500 ₽)" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input js-input-email" type="email" placeholder="Введите email" id="" />
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip form__tooltip_error">Выберите способ оплаты</p>
+											</div>
+											<div class="modal-total">
+												<span class="modal-total__title">Итоговая сумма: </span>
+												<span class="modal-total__sum">1000 ₽</span>
+												<span class="modal-total__descr"> (без учёта комиссии)</span>
+											</div>
+											<button class="button button--m button--default button--max form__button" type="button">
+												<div class="button__block">
+													<span class="button__text">Оплатить</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+											<label class="form-button checkbox form__label">
+												<input class="form-button__input" type="checkbox" />
+												<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+													<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+													<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+												</svg>
+												<span class="form-button__text">Я соглашаюсь с <a class="form-button__link" href="#" target="_blank">правилами</a> и даю согласие на обработку персональных данных</span>
+											</label>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="reserve">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--s">Вы бронируете квест</p>
+										<p class="modal__title--s">«Квест Машина времени: Тайна профессора Рихтера»</p>
+										<p class="modal__subtitle">Игра состоится 3 октября в 14:40 <nobr>(стандартная цена: 4000 руб)</nobr>
+										</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<input class="form__input" type="text" placeholder="Ваше имя" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input js-input-email" type="email" placeholder="Введите email" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input" type="text" placeholder="Комментарий / Промокод" id="" />
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip form__tooltip_error">Введите корректные данные</p>
+											</div>
+											<button class="button button--m button--default button--max form__button" type="button" data-modal-target="reserve-success">
+												<div class="button__block">
+													<span class="button__text">Участвовать</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+											<label class="form-button checkbox form__label">
+												<input class="form-button__input" type="checkbox" />
+												<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+													<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+													<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+												</svg>
+												<span class="form-button__text">Я соглашаюсь с <a class="form-button__link" href="#" target="_blank">правилами</a> и даю согласие на обработку персональных данных</span>
+											</label>
+											<label class="form-button checkbox form__label">
+												<input class="form-button__input" type="checkbox" />
+												<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+													<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+													<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+												</svg>
+												<span class="form-button__text">Я согласен получать новости и рекламные рассылки</span>
+											</label>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="reserve-success">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<svg class="modal__check" viewbox="0 0 20 20">
+											<path d="M1,11L6,16L18.5,3.5"></path>
+										</svg>
+										<p class="modal__title--s">Вы записались на квест</p>
+										<p class="modal__title--s">Квест Машина времени: Тайна профессора Рихтера</p>
+										<p class="modal__subtitle">
+											<span class="modal__subtitle--block subtitle--bold">Дата 01.10.2019</span>
+											<span class="modal__subtitle--block subtitle--bold">Время проведения 11:40</span>
+											<span class="modal__subtitle--block">Адрес г. Москва, ул. 9-я Парковая, д. 62</span>
+											<span class="modal__subtitle--block">Телефон +7 (499) 322-29-40</span>
+											<span class="modal__subtitle--block subtitle--bold">Цена 4000 ₽</span>
+											<button class="button button--m button--reverse button--default button--max modal__button js-modal-close" type="button">
+												<div class="button__block">
+													<span class="button__text">Вернуться</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+										</p>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="reserve-pay">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--s">Вы бронируете квест</p>
+										<p class="modal__title--s">«Квест Машина времени: Тайна профессора Рихтера»</p>
+										<p class="modal__subtitle">Игра состоится 3 октября в 14:40 <nobr>(стандартная цена: 4000 руб)</nobr>
+										</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<input class="form__input js-input-number" type="text" placeholder="Сумма мин. 1000 ₽" id="" />
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip form__tooltip_error">Введите корректные данные</p>
+											</div>
+											<button class="button button--m button--default button--max form__button" type="button">
+												<div class="button__block">
+													<span class="button__text">Оплатить</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="review">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">Оставьте ваш отзыв</p>
+										<form class="form modal__form">
+											<p class="form__descr">Оцените пройденный квест</p>
+											<ul class="choose-rating form__rating">
+												<li class="choose-rating__item">
+													<label class="choose-rating__wrapper">
+														<input class="choose-rating__radio" name="review-rating" value="5" type="text" />
+														<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+															<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+														</svg>
+													</label>
+												</li>
+												<li class="choose-rating__item">
+													<label class="choose-rating__wrapper">
+														<input class="choose-rating__radio" name="review-rating" value="4" type="text" />
+														<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+															<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+														</svg>
+													</label>
+												</li>
+												<li class="choose-rating__item">
+													<label class="choose-rating__wrapper">
+														<input class="choose-rating__radio" name="review-rating" value="3" type="text" />
+														<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+															<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+														</svg>
+													</label>
+												</li>
+												<li class="choose-rating__item">
+													<label class="choose-rating__wrapper">
+														<input class="choose-rating__radio" name="review-rating" value="2" type="text" />
+														<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+															<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+														</svg>
+													</label>
+												</li>
+												<li class="choose-rating__item">
+													<label class="choose-rating__wrapper">
+														<input class="choose-rating__radio" name="review-rating" value="1" type="text" />
+														<svg class="choose-rating__star" viewBox="0 0 12 11.92">
+															<path d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+														</svg>
+													</label>
+												</li>
+											</ul><!-- для зарегистрированных пользователей эти два поля убираются-->
+											<div class="form__block">
+												<input class="form__input" type="text" placeholder="Введите ваше имя" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input js-input-phone" type="text" placeholder="Введите ваш телефон" id="" />
+											</div>
+											<!---->
+											<div class="form__block">
+												<textarea class="form__textarea" placeholder="Опишите ваши впечатления" id=""></textarea>
+											</div>
+											<button class="button button--m button--default button--max form__button js-get-review" type="button">
+												<div class="button__block">
+													<span class="button__text">Отправить</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="docs">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--s">Получить материалы <br>по открытию квеста</p>
+										<p class="modal__subtitle">Оставьте контакты и узнайте, как <br>открыть свой квест</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="" />
+											</div>
+											<div class="form__block">
+												<input class="form__input js-input-email" type="email" placeholder="Введите email" id="" />
+											</div>
+											<button class="button button--m button--default button--max form__button js-get-call" type="button">
+												<div class="button__block">
+													<span class="button__text">Отправить</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+											<label class="form-button checkbox form__label">
+												<input class="form-button__input" type="checkbox" />
+												<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+													<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+													<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+												</svg>
+												<span class="form-button__text">Я соглашаюсь с <a class="form-button__link" href="#" target="_blank">правилами</a> и даю согласие на обработку персональных данных</span>
+											</label>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--x" data-modal="faq">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">FAQ по бонусной программе</p>
+										<div class="modal-faq">
+											<ul class="modal-faq__list">
+												<li class="modal-faq__item">
+													<div class="accordion modal-faq__accordion">
+														<div class="accordion__block">
+															<p class="accordion__title">Зачем нужна бонусная система?</p>
+														</div>
+														<div class="accordion__field">
+															<div class="accordion__content">
+																<p>Бонусная система – это возможность для активных игроков, которые часто и с удовольствием посещают квесты и перформансы, получить бесплатно дополнительные игры или другие бонусы.</p>
+																<p>Главное правило: 1 квестобалл равен 1 рублю! Все просто, никаких сложных механик и расчетов. Если на вашем бонусном счете 3 000 квестобаллов, то вы можете их потратить, например, на игру в квесте стоимостью 3 000 рублей.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="modal-faq__item">
+													<div class="accordion modal-faq__accordion">
+														<div class="accordion__block">
+															<p class="accordion__title">Кто может пользоваться бонусной системой?</p>
+														</div>
+														<div class="accordion__field">
+															<div class="accordion__content">
+																<p>Любой зарегистрированный пользователь сайта получает возможность копить и тратить квестобаллы. Сразу после регистрации и заполнения данных мы начисляем 1 000 квестобаллов на ваш личный бонусный счет. При этом зарегистрированный пользователь получает начальный статус в системе - «Black».</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="modal-faq__item">
+													<div class="accordion modal-faq__accordion">
+														<div class="accordion__block">
+															<p class="accordion__title">За что начисляются квестобаллы?</p>
+														</div>
+														<div class="accordion__field">
+															<div class="accordion__content">
+																<p>Все начисления квестобаллов происходят автоматически согласно таблице в личном кабинете – вам не требуется писать нам и напоминать о зачислении. Кэшбек рассчитывается по тому статусу, который значился в вашем личном кабинете на момент осуществления бронирования. Единственное, что нужно учитывать: иногда между целевым действием и начислением должно пройти некоторое время. Начисление кэшбека, бонусов за отзывы и использование промокода в комментарии к бронированию на бонусный счет происходит после верификации игры (в среднем в течение 10 рабочих дней после вашего сеанса).</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="modal-faq__item">
+													<div class="accordion modal-faq__accordion">
+														<div class="accordion__block">
+															<p class="accordion__title">Как я могу потратить квестобаллы? </p>
+														</div>
+														<div class="accordion__field">
+															<div class="accordion__content">
+																<p>В настоящее время квестобаллы можно потратить на посещение квестов или на подарочные сертификаты. На вашем бонусном счету должно быть не менее 3000 накопленных квестобаллов;</p>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="out">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">Вы уверены, что хотите выйти?</p>
+										<div class="modal-out">
+											<button class="modal-out__button modal-out__button--default" type="button">Да</button>
+											<button class="modal-out__button modal-out__button--success js-modal-close" type="button">Нет</button>
+										</div>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="coupon">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">Активация купона</p>
+										<p class="modal__subtitle">Пожалуйста, введите в поле ниже ваш промокод</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<input class="form__input" type="text" placeholder="Введите ваш купон" id="" />
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip form__tooltip_success">Купон активирован! Вам начислено 1000 квестобаллов</p>
+											</div>
+											<button class="button button--m button--default button--max form__button" type="button">
+												<div class="button__block">
+													<span class="button__text">Активировать</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--x" data-modal="history">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--m">Начисления и списания</p>
+										<div class="modal-history">
+											<div class="modal-history__head">
+												<ul class="modal-history__row">
+													<li class="modal-history__col">
+														<p class="modal-history__subtitle">Дата</p>
+													</li>
+													<li class="modal-history__col">
+														<p class="modal-history__subtitle">Описание</p>
+													</li>
+													<li class="modal-history__col">
+														<p class="modal-history__subtitle">Статус</p>
+													</li>
+													<li class="modal-history__col" data-col="point">
+														<p class="modal-history__subtitle">Квестобаллов</p>
+													</li>
+												</ul>
+											</div>
+											<div class="modal-history__body">
+												<ul class="modal-history__row modal-history__row_bg">
+													<li class="modal-history__col">
+														<p class="modal-history__text">31 октября</p>
+													</li>
+													<li class="modal-history__col">
+														<p class="modal-history__text">Регистрация</p>
+													</li>
+													<li class="modal-history__col">
+														<p class="modal-history__text">Подтверждено</p>
+													</li>
+													<li class="modal-history__col" data-col="point">
+														<p class="modal-history__text">1000</p>
+													</li>
+												</ul>
+												<ul class="modal-history__row modal-history__row_bg">
+													<li class="modal-history__col">
+														<p class="modal-history__text">11 октября</p>
+													</li>
+													<li class="modal-history__col">
+														<p class="modal-history__text">Квест</p>
+													</li>
+													<li class="modal-history__col">
+														<p class="modal-history__text">Подтверждено</p>
+													</li>
+													<li class="modal-history__col" data-col="point">
+														<p class="modal-history__text">3000</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="call-me">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--s">Твоё приключение в 1 клик</p>
+										<p class="modal__subtitle">Оставьте свой контактный номер телефона. <br>Наши операторы свяжутся с Вами и помогут выбрать приключение!</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="" />
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip form__tooltip_error">Введите корректный номер телефона</p>
+											</div>
+											<button class="button button--m button--default button--max form__button js-get-call" type="button">
+												<div class="button__block">
+													<span class="button__text">Заказать звонок</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+											<label class="form-button checkbox form__label">
+												<input class="form-button__input" type="checkbox" />
+												<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+													<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+													<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+												</svg>
+												<span class="form-button__text">Я соглашаюсь с <a class="form-button__link" href="#" target="_blank">правилами</a> и даю согласие на обработку персональных данных</span>
+											</label>
+										</form>
+									</div>
+								</div>
+								<div class="modal__container modal__container--m" data-modal="get-game">
+									<div class="modal__close js-modal-close">
+										<svg class="modal__close-icon">
+											<use xlink:href="assets/images/icon.svg#icon_close"></use>
+										</svg>
+									</div>
+									<div class="modal__content">
+										<p class="modal__title--s">Оставь свой номер телефона <br>и получи ссылку на telegram-игру</p>
+										<form class="form modal__form">
+											<div class="form__block">
+												<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="" />
+											</div>
+											<div class="form__bottom">
+												<p class="form__tooltip form__tooltip_error">Введите корректный номер телефона</p>
+											</div>
+											<button class="button button--m button--default button--max form__button js-get-game" type="button">
+												<div class="button__block">
+													<span class="button__text">Получить игру</span>
+													<svg class="button__icon">
+														<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+													</svg>
+												</div>
+											</button>
+											<label class="form-button checkbox form__label">
+												<input class="form-button__input" type="checkbox" />
+												<svg class="form-button__icon checkbox__icon" viewBox="0 0 20 20">
+													<rect class="checkbox__icon-box" x="1" y="1" width="18" height="18" rx="5"></rect>
+													<path class="checkbox__icon-check" d="M4,10L8,14L16.5,5.5"></path>
+												</svg>
+												<span class="form-button__text">Я соглашаюсь с <a class="form-button__link" href="#" target="_blank">правилами</a>и даю согласие на обработку персональных данных</span>
+											</label>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Форма</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/form/form</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Если есть ошибка, то добавляем .form__block класс -error-</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="form">
+								<div class="form__block">
+									<input class="form__input js-input-phone" type="text" placeholder="Введите телефон" id="" />
+								</div>
+								<div class="form__block">
+									<input class="form__input form__input_icon js-input-psw" type="password" placeholder="Введите пароль" id="" />
+									<svg class="form__icon js-icon-psw" viewbox="0 0 17 12.87">
+										<path d="M14.46,4.43a8,8,0,0,0-1.25-.88,8.72,8.72,0,0,0-2-.84A9.41,9.41,0,0,0,2.6,4.43L0,6.64,2.54,8.8a7.79,7.79,0,0,0,.71.54,11.39,11.39,0,0,0,2.38,1.13,9.68,9.68,0,0,0,2.82.42,9.24,9.24,0,0,0,6-2.09L17,6.59Zm-.47,4A8.87,8.87,0,0,1,5.83,10,9.45,9.45,0,0,1,3.61,9c-.23-.16-.46-.33-.67-.5L.81,6.64,3,4.78a8.75,8.75,0,0,1,8-1.6A6.77,6.77,0,0,1,12.88,4a8.08,8.08,0,0,1,1.18.83l2.13,1.81Z"></path>
+										<path d="M8.79,3.8a3.14,3.14,0,0,1,3.39,2.81A3.14,3.14,0,0,1,8.79,9.42,3.14,3.14,0,0,1,5.4,6.61,3.14,3.14,0,0,1,8.79,3.8m0-.5A3.63,3.63,0,0,0,4.9,6.61,3.63,3.63,0,0,0,8.79,9.92a3.63,3.63,0,0,0,3.89-3.31A3.63,3.63,0,0,0,8.79,3.3Z"></path>
+										<path class="form__icon-line" d="M2.13,12.62a.53.53,0,0,1-.36-.13.47.47,0,0,1,0-.72L15.16.38a.55.55,0,0,1,.36-.13.59.59,0,0,1,.37.13.48.48,0,0,1,.17.37.48.48,0,0,1-.17.36L2.5,12.49A.54.54,0,0,1,2.13,12.62Z"></path>
+									</svg>
+								</div>
+								<div class="form__block form__block_code">
+									<div class="form__block-inner">
+										<input class="form__input form__input_min js-input-code" type="text" placeholder="Код" id="" />
+										<div class="form__subblock">
+											<button class="form__text" type="button" data-modal-target="resetpassword2">Отправить ещё раз</button>
+											<span class="form__timer"> </span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Пагинация</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/pagination/pagination</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Чтобы сделать стрелку неактивной, добавляем ссылке атрибут disabled, зеленая обводка задается с помощью модификатора .pagination__link_active у ссылки</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<nav class="pagination">
+								<a class="pagination__link-arr pagination__link-arr_prev" href="#" disabled="disabled">
+									<svg class="pagination__icon">
+										<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+									</svg>
+								</a>
+								<ul class="pagination__list">
+									<li class="pagination__item">
+										<a class="pagination__link pagination__link_active" href="#">1</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">2</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">3</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">4</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">...</a>
+									</li>
+								</ul>
+								<a class="pagination__link-arr pagination__link-arr_next" href="#">
+									<svg class="pagination__icon">
+										<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+									</svg>
+								</a>
+							</nav>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Аккордион</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/accordion/accordion</p>
+							</div>
+							<div class="ui-kit__description"></div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="accordion">
+								<div class="accordion__block">
+									<p class="accordion__title">Зачем нужна бонусная система?</p>
+								</div>
+								<div class="accordion__field">
+									<div class="accordion__content">
+										<p>Бонусная система – это возможность для активных игроков, которые часто и с удовольствием посещают квесты и перформансы, получить бесплатно дополнительные игры или другие бонусы.</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion">
+								<div class="accordion__block">
+									<p class="accordion__title">Зачем нужна бонусная система?</p>
+								</div>
+								<div class="accordion__field">
+									<div class="accordion__content">
+										<p>Бонусная система – это возможность для активных игроков, которые часто и с удовольствием посещают квесты и перформансы, получить бесплатно дополнительные игры или другие бонусы.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Компонент с отзывами</h2>
+							<div class="ui-kit__blockpath">
+								<p>Компонент: components/quest-reviews/quest-reviews</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Встречается на страницах "О Квесте" и "Отзывы"</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="quest-reviews">
+								<div class="quest-reviews__header">
+									<ul class="grid">
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12">
+											<ul class="grid">
+												<li class="grid__col grid__col_xl_6">
+													<p class="quest-reviews__title">Наш рейтинг</p>
+													<div class="quest-reviews__block">
+														<img class="quest-reviews__img quest-reviews__img_s_s" src="assets/images/quest/smile.svg" alt="" role="presentation" />
+														<p class="quest-reviews__text">9.8 <span class="quest-reviews__descr quest-reviews__descr_op">/ 10</span>
+														</p>
+													</div>
+												</li>
+												<li class="grid__col grid__col_xl_6">
+													<p class="quest-reviews__title">Впечатлены</p>
+													<div class="quest-reviews__block">
+														<img class="quest-reviews__img quest-reviews__img_s_s" src="assets/images/quest/fire.svg" alt="" role="presentation" />
+														<p class="quest-reviews__text">4332 <span class="quest-reviews__descr quest-reviews__descr_op">игрока</span>
+														</p>
+													</div>
+												</li>
+												<li class="grid__col grid__col_xl_12 quest-reviews__block--mt">
+													<div class="quest-reviews__subblock">
+														<img class="quest-reviews__img quest-reviews__img_s_x" src="assets/images/quest/medal.svg" alt="" role="presentation" />
+														<p class="quest-reviews__descr">Квест входит в 30 % лучших квестов Москвы по проверенным отзывам 129 команд</p>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12">
+											<p class="quest-reviews__title">Средняя оценка Мир квестов</p>
+											<div class="quest-reviews__row">
+												<p class="quest-reviews__text">4.8 <span class="quest-reviews__descr quest-reviews__descr_op">/ 5</span>
+												</p>
+												<span class="quest-reviews__descr quest-reviews__descr_op">43 отзыва </span>
+											</div>
+											<div class="quest-reviews__block--mt">
+												<ul class="rate">
+													<li class="rate__row">
+														<div class="rate__rating">
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+														</div>
+														<div class="rate__progressbar" data-count="60">
+															<span class="rate__progress"></span>
+														</div>
+													</li>
+													<li class="rate__row">
+														<div class="rate__rating">
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+														</div>
+														<div class="rate__progressbar" data-count="20">
+															<span class="rate__progress"></span>
+														</div>
+													</li>
+													<li class="rate__row">
+														<div class="rate__rating">
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+														</div>
+														<div class="rate__progressbar" data-count="10">
+															<span class="rate__progress"></span>
+														</div>
+													</li>
+													<li class="rate__row">
+														<div class="rate__rating">
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+														</div>
+														<div class="rate__progressbar" data-count="5">
+															<span class="rate__progress"></span>
+														</div>
+													</li>
+													<li class="rate__row">
+														<div class="rate__rating">
+															<svg class="rate__star">
+																<use xlink:href="assets/images/icon.svg#icon_star"></use>
+															</svg>
+														</div>
+														<div class="rate__progressbar" data-count="2">
+															<span class="rate__progress"></span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12">
+											<p class="quest-reviews__title">Достижения и награды</p>
+											<div class="quest-reviews__pict-list">
+												<a class="quest-reviews__picture" href="assets/images/quest/diploma.jpg" data-fslightbox="reward">
+													<img src="assets/images/quest/diploma.jpg" alt="Диплом" />
+												</a>
+												<div class="quest-reviews__pict-block">
+													<img class="quest-reviews__img quest-reviews__img_s_m" src="assets/images/quest/badge.svg" alt="" role="presentation" />
+													<span class="quest-reviews__pict-tooltip">Достижение: 3 000 игроков, прошедших квест</span>
+												</div>
+												<div class="quest-reviews__pict-block">
+													<img class="quest-reviews__img quest-reviews__img_s_m" src="assets/images/quest/medal.svg" alt="" role="presentation" />
+													<span class="quest-reviews__pict-tooltip">Достижение: 3 000 игроков, прошедших квест</span>
+												</div>
+												<div class="quest-reviews__pict-block">
+													<img class="quest-reviews__img quest-reviews__img_s_m" src="assets/images/quest/cup.svg" alt="" role="presentation" />
+													<span class="quest-reviews__pict-tooltip">Достижение: 3 000 игроков, прошедших квест</span>
+												</div>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_12 grid__col_lg_6 grid__col_sm_12">
+											<div class="quest-reviews__setreview-wrapper">
+												<button class="button button--nobg button--s quest-reviews__setreview" type="button" data-modal-target="review">
+													<div class="button__block">
+														<span class="button__text">Оставить отзыв</span>
+													</div>
+												</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="quest-reviews__body">
+									<ul class="grid quest-reviews__list js-review-list">
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -semi-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Отличный квест. Большое спасибо</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">02.05.19</p>
+															<p class="review__descr">14:00</p>
+														</div>
+														<p class="review__descr js-review-phone">+79645653707</p>
+													</div>
+												</div>
+												<p class="review__name">Мария</p>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Впечатления хорошие от квеста. Спасибо!</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">03.05.19</p>
+															<p class="review__descr">18:00</p>
+														</div>
+														<p class="review__descr js-review-phone">+79112562804</p>
+													</div>
+												</div>
+												<p class="review__name">Екатерина Музыченко</p>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -semi-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Квест замечательный актер играл на высшем уровне!</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">02.05.19</p>
+															<p class="review__descr">14:00</p>
+														</div>
+														<p class="review__descr js-review-phone">+79630372604</p>
+													</div>
+												</div>
+												<p class="review__name">Евгений Капитанский</p>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -semi-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Отличный квест. Большое спасибо,Отличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибоОтличный квест. Большое спасибо</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">02.05.19</p>
+															<p class="review__descr">14:00</p>
+														</div>
+														<p class="review__descr js-review-phone">+79645651385</p>
+													</div>
+												</div>
+												<p class="review__name">Мария</p>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Все супер!</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">04.05.19</p>
+															<p class="review__descr">16:59</p>
+														</div>
+														<p class="review__descr js-review-phone">+79695633707</p>
+													</div>
+												</div>
+												<p class="review__name">Айгун Кулиева</p>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Отлично провели время на вашем квесте. Впечатления отличные. Рекомендую всем для участия</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">03.05.19</p>
+															<p class="review__descr">18:00</p>
+														</div>
+														<p class="review__descr js-review-phone">+79145563211</p>
+													</div>
+												</div>
+												<p class="review__name">Екатерина Музыченко</p>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Квест замечательный актер играл на высшем уровне!</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">02.05.19</p>
+															<p class="review__descr">18:33</p>
+														</div>
+														<p class="review__descr js-review-phone">+79145561563</p>
+													</div>
+												</div>
+												<p class="review__name">Евгений Капитанский</p>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Впечатления хорошие от квеста. Спасибо!</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">22.05.19</p>
+															<p class="review__descr">00:00</p>
+														</div>
+														<p class="review__descr js-review-phone">+79145563211</p>
+													</div>
+												</div>
+												<p class="review__name">Мария</p>
+											</div>
+										</li>
+										<li class="grid__col grid__col_xl_4 grid__col_lg_6 grid__col_sm_12 quest-reviews__item js-review-item">
+											<div class="review">
+												<div class="review__content">
+													<ul class="rating review__rating">
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -full-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star -semi-" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+														<li class="rating__item">
+															<svg class="rating__star star" viewBox="0 0 12 11.92">
+																<path class="star__empty" d="M7.41 3.99l.12.3.31.03 3.66.32-2.79 2.54-.23.2.07.3.83 3.74-3.1-1.96-.28-.18-.28.18-3.1 1.96.83-3.74.07-.3-.23-.2-2.79-2.54 3.66-.32.31-.03.12-.3 1.41-3.49 1.41 3.49z"></path>
+																<path class="star__semi" d="M6 0.5 6 9.28 2.62 11.42 3.52 7.38 0.5 4.64 4.47 4.29 6 0.5z"></path>
+																<path class="star__full" d="M6 0.5 6 9.28 9.38 11.42 8.48 7.38 11.5 4.64 7.53 4.29 6 0.5z"></path>
+															</svg>
+														</li>
+													</ul>
+													<p class="review__text">Не рекомендую</p>
+													<div class="review__bottom">
+														<div class="review__bottom-block">
+															<svg class="review__icon">
+																<use xlink:href="assets/images/icon.svg#icon_clock"></use>
+															</svg>
+															<p class="review__descr">04.05.19</p>
+															<p class="review__descr">20:12</p>
+														</div>
+														<p class="review__descr js-review-phone">+79112562804</p>
+													</div>
+												</div>
+												<p class="review__name">Айгун Кулиева</p>
+											</div>
+										</li>
+									</ul>
+									<div class="quest-reviews__more show-more__wrapper">
+										<button class="show-more" type="button">Читать далее</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Компонент events-slider</h2>
+							<div class="ui-kit__blockpath">
+								<p>Компонент: components/events-slider/events-slider</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Описание компонента</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<section class="events-slider section--mb-lg">
+								<div class="container">
+									<div class="events-slider__content">
+										<div class="events-slider__box swiper-container">
+											<div class="events-slider__grid swiper-wrapper">
+												<div class="events-slider__item swiper-slide">
+													<a class="events-slider__link" href="">
+														<div class="events-slider__bg-wrapper">
+															<picture class="events-slider__bg">
+																<source srcset="assets/images/events-slider/1_fablet.jpg" media="(max-width: 640px)" />
+																<img src="assets/images/events-slider/1.jpg" alt="" />
+															</picture>
+														</div>
+														<p class="events-slider__subtitle">Квесты</p>
+													</a>
+												</div>
+												<div class="events-slider__item swiper-slide">
+													<a class="events-slider__link" href="">
+														<div class="events-slider__bg-wrapper">
+															<picture class="events-slider__bg">
+																<source srcset="assets/images/events-slider/2_fablet.jpg" media="(max-width: 640px)" />
+																<img src="assets/images/events-slider/2.jpg" alt="" />
+															</picture>
+														</div>
+														<p class="events-slider__subtitle">Детские праздники</p>
+													</a>
+												</div>
+												<div class="events-slider__item swiper-slide">
+													<a class="events-slider__link" href="">
+														<div class="events-slider__bg-wrapper">
+															<picture class="events-slider__bg">
+																<source srcset="assets/images/events-slider/3_fablet.jpg" media="(max-width: 640px)" />
+																<img src="assets/images/events-slider/3.jpg" alt="" />
+															</picture>
+														</div>
+														<p class="events-slider__subtitle">Подарочные сертификаты</p>
+													</a>
+												</div>
+												<div class="events-slider__item swiper-slide">
+													<a class="events-slider__link" href="">
+														<div class="events-slider__bg-wrapper">
+															<picture class="events-slider__bg">
+																<source srcset="assets/images/events-slider/4_fablet.jpg" media="(max-width: 640px)" />
+																<img src="assets/images/events-slider/4.jpg" alt="" />
+															</picture>
+														</div>
+														<p class="events-slider__subtitle">Развлечения</p>
+													</a>
+												</div>
+												<div class="events-slider__item swiper-slide">
+													<a class="events-slider__link" href="">
+														<div class="events-slider__bg-wrapper">
+															<picture class="events-slider__bg">
+																<source srcset="assets/images/events-slider/5_fablet.jpg" media="(max-width: 640px)" />
+																<img src="assets/images/events-slider/5.jpg" alt="" />
+															</picture>
+														</div>
+														<p class="events-slider__subtitle">Выездные мероприятия</p>
+													</a>
+												</div>
+												<div class="events-slider__item swiper-slide">
+													<a class="events-slider__link" href="">
+														<div class="events-slider__bg-wrapper">
+															<picture class="events-slider__bg">
+																<source srcset="assets/images/events-slider/6_fablet.jpg" media="(max-width: 640px)" />
+																<img src="assets/images/events-slider/6.jpg" alt="" />
+															</picture>
+														</div>
+														<p class="events-slider__subtitle">Товары&nbsp;- подарки</p>
+													</a>
+												</div>
+											</div>
+										</div>
+										<button class="swiper__button-prev swiper__button events-slider__button-prev" type="button">
+											<div class="swiper__icon-wrapper">
+												<svg class="swiper__icon">
+													<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+												</svg>
+											</div>
+										</button>
+										<button class="swiper__button-next swiper__button events-slider__button-next" type="button">
+											<div class="swiper__icon-wrapper">
+												<svg class="swiper__icon">
+													<use xlink:href="assets/images/icon.svg#icon_arr-right"></use>
+												</svg>
+											</div>
+										</button>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Компонент events-tile</h2>
+							<div class="ui-kit__blockpath">
+								<p>Компонент: components/events-tile/events-tile</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Описание компонента</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<section class="events-tile section--mb-lg">
+								<div class="container">
+									<h2 class="events-tile__title title">Что вас интересует?</h2>
+									<div class="events-tile__content">
+										<ul class="grid events-tile__grid">
+											<li class="grid__col grid__col_xl_4 grid__col_lg_6 events-tile__item">
+												<a class="events-tile__link" href="">
+													<picture class="events-tile__bg">
+														<source srcset="assets/images/events-tile/1_fablet.jpg" media="(max-width: 640px)" />
+														<img src="assets/images/events-tile/1.jpg" alt="" />
+													</picture>
+													<span class="events-tile__overlay"></span>
+													<p class="events-tile__subtitle">Квесты</p>
+												</a>
+											</li>
+											<li class="grid__col grid__col_xl_4 grid__col_lg_6 events-tile__item">
+												<a class="events-tile__link" href="">
+													<picture class="events-tile__bg">
+														<source srcset="assets/images/events-tile/2_fablet.jpg" media="(max-width: 640px)" />
+														<img src="assets/images/events-tile/2.jpg" alt="" />
+													</picture>
+													<span class="events-tile__overlay"></span>
+													<p class="events-tile__subtitle">Детские праздники</p>
+												</a>
+											</li>
+											<li class="grid__col grid__col_xl_4 grid__col_lg_6 events-tile__item">
+												<a class="events-tile__link" href="">
+													<picture class="events-tile__bg">
+														<source srcset="assets/images/events-tile/3_fablet.jpg" media="(max-width: 640px)" />
+														<img src="assets/images/events-tile/3.jpg" alt="" />
+													</picture>
+													<span class="events-tile__overlay"></span>
+													<p class="events-tile__subtitle">Подарочные сертификаты</p>
+												</a>
+											</li>
+											<li class="grid__col grid__col_xl_4 grid__col_lg_6 events-tile__item">
+												<a class="events-tile__link" href="">
+													<picture class="events-tile__bg">
+														<source srcset="assets/images/events-tile/4_fablet.jpg" media="(max-width: 640px)" />
+														<img src="assets/images/events-tile/4.jpg" alt="" />
+													</picture>
+													<span class="events-tile__overlay"></span>
+													<p class="events-tile__subtitle">Развлечения</p>
+												</a>
+											</li>
+											<li class="grid__col grid__col_xl_4 grid__col_lg_6 events-tile__item">
+												<a class="events-tile__link" href="">
+													<picture class="events-tile__bg">
+														<source srcset="assets/images/events-tile/5_fablet.jpg" media="(max-width: 640px)" />
+														<img src="assets/images/events-tile/5.jpg" alt="" />
+													</picture>
+													<span class="events-tile__overlay"></span>
+													<p class="events-tile__subtitle">Выездные мероприятия</p>
+												</a>
+											</li>
+											<li class="grid__col grid__col_xl_4 grid__col_lg_6 events-tile__item">
+												<a class="events-tile__link" href="">
+													<picture class="events-tile__bg">
+														<source srcset="assets/images/events-tile/6_fablet.jpg" media="(max-width: 640px)" />
+														<img src="assets/images/events-tile/6.jpg" alt="" />
+													</picture>
+													<span class="events-tile__overlay"></span>
+													<p class="events-tile__subtitle">Товары&nbsp;- подарки</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+				<section class="ui-kit__section">
+					<div class="ui-kit__section-head">
+						<div class="container">
+							<h2 class="ui-kit__title">Блок datepicker</h2>
+							<div class="ui-kit__blockpath">
+								<p>Блок: blocks/datepicker/datepicker</p>
+							</div>
+							<div class="ui-kit__description">
+								<p>Описание Блока</p>
+							</div>
+						</div>
+					</div>
+					<div class="ui-kit__section-content">
+						<div class="container">
+							<div class="dpicker">
+								<input class="dpicker__input" type="text" value="01/03/2020" />
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<script src="assets/scripts/app.min.js"></script>
+	</body>
+
+</html>
